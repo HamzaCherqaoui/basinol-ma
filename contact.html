@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BASINOL - Contactez-nous | Service client et assistance</title>
+    <meta name="description" content="Contactez BASINOL pour toute question concernant nos produits, nos services ou pour devenir partenaire. Notre équipe est à votre disposition.">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">
+                <a href="index.html">
+                    <img src="images/logo/basinol-logo.svg" alt="BASINOL Logo">
+                </a>
+            </div>
+            <nav class="header__nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="index.html" class="nav__link">Accueil</a></li>
+                    <li class="nav__item"><a href="entreprise.html" class="nav__link">Entreprise</a></li>
+                    <li class="nav__item"><a href="produits.html" class="nav__link">Produits</a></li>
+                    <li class="nav__item"><a href="partenaires.html" class="nav__link">Partenaires de vente</a></li>
+                    <li class="nav__item"><a href="actualites.html" class="nav__link">Actualités</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link active">Contactez-nous</a></li>
+                </ul>
+            </nav>
+            <div class="header__lang">
+                <button class="lang-btn active" data-lang="fr">FR</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li>Contactez-nous</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contact Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <h1>Contactez-nous</h1>
+            <p>Vous avez des questions sur nos produits ou services? Vous souhaitez devenir partenaire de distribution? Notre équipe est à votre disposition pour vous aider. N'hésitez pas à nous contacter en utilisant le formulaire ci-dessous ou en nous appelant directement.</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <h2>Envoyez-nous un message</h2>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Adresse email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Entreprise</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Sujet *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="product">Question sur un produit</option>
+                                <option value="technical">Support technique</option>
+                                <option value="partnership">Partenariat commercial</option>
+                                <option value="career">Carrière</option>
+                                <option value="other">Autre</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <label for="message">Message *</label>
+                            <textarea id="message" name="message" rows="6" required></textarea>
+                        </div>
+                        
+                        <div class="form-group full-width">
+                            <div class="form-consent">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <label for="privacy">J'accepte que mes données soient traitées conformément à la <a href="politique-confidentialite.html">politique de confidentialité</a> de BASINOL. *</label>
+                            </div>
+                        </div>
+                        
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                        </div>
+                    </form>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <h3>Coordonnées</h3>
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="images/icons/location.svg" alt="Adresse">
+                            </div>
+                            <div class="info-text">
+                                <h4>Adresse</h4>
+                                <address>
+                                    BASINOL / RADICO Trading GmbH<br>
+                                    Industriestraße 45<br>
+                                    10115 Berlin<br>
+                                    Allemagne
+                                </address>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="images/icons/phone.svg" alt="Téléphone">
+                            </div>
+                            <div class="info-text">
+                                <h4>Téléphone</h4>
+                                <p>+49 30 1234567</p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="images/icons/email.svg" alt="Email">
+                            </div>
+                            <div class="info-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:info@basinol.com">info@basinol.com</a></p>
+                            </div>
+                        </div>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <img src="images/icons/clock.svg" alt="Heures d'ouverture">
+                            </div>
+                            <div class="info-text">
+                                <h4>Heures d'ouverture</h4>
+                                <p>Lundi - Vendredi: 8h00 - 17h00<br>
+                                Samedi - Dimanche: Fermé</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3>Service client</h3>
+                        <p>Notre équipe de service client est disponible pour répondre à toutes vos questions concernant nos produits et services.</p>
+                        <p><strong>Téléphone:</strong> +49 30 1234567-99</p>
+                        <p><strong>Email:</strong> <a href="mailto:support@basinol.com">support@basinol.com</a></p>
+                    </div>
+                    
+                    <div class="social-links">
+                        <h3>Suivez-nous</h3>
+                        <div class="social-icons">
+                            <a href="#" aria-label="Facebook" class="social-icon">
+                                <img src="images/icons/facebook.svg" alt="Facebook">
+                            </a>
+                            <a href="#" aria-label="Instagram" class="social-icon">
+                                <img src="images/icons/instagram.svg" alt="Instagram">
+                            </a>
+                            <a href="#" aria-label="YouTube" class="social-icon">
+                                <img src="images/icons/youtube.svg" alt="YouTube">
+                            </a>
+                            <a href="#" aria-label="LinkedIn" class="social-icon">
+                                <img src="images/icons/linkedin.svg" alt="LinkedIn">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <h2>Notre emplacement</h2>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.6854224284097!2d13.383906376926151!3d52.53080287436787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851e52cccb2a1%3A0x6f8bdd46eb8c81!2sIndustriestraße%2C%2010115%20Berlin%2C%20Allemagne!5e0!3m2!1sfr!2sfr!4v1687900456789!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Questions fréquemment posées</h2>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Comment puis-je trouver le produit BASINOL adapté à mon véhicule?</h3>
+                        <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Vous pouvez utiliser notre outil de recherche de produits sur notre site web en entrant les spécifications de votre véhicule. Vous pouvez également consulter le manuel de votre véhicule pour connaître les spécifications requises ou contacter notre service client pour obtenir des conseils personnalisés.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Où puis-je acheter des produits BASINOL?</h3>
+                        <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Les produits BASINOL sont disponibles auprès de notre réseau de partenaires de distribution. Consultez notre page <a href="partenaires.html">Partenaires de vente</a> pour trouver le distributeur le plus proche de chez vous.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Comment puis-je devenir un partenaire de distribution BASINOL?</h3>
+                        <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Si vous êtes intéressé à devenir un partenaire de distribution BASINOL, veuillez remplir notre formulaire de contact en sélectionnant "Partenariat commercial" comme sujet. Notre équipe commerciale vous contactera pour discuter des opportunités de partenariat.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quelles sont les certifications des produits BASINOL?</h3>
+                        <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Les produits BASINOL sont certifiés selon les normes internationales les plus strictes et sont approuvés par de nombreux constructeurs automobiles (OEM). Vous pouvez trouver des informations détaillées sur les certifications spécifiques de chaque produit sur sa fiche technique.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__columns">
+                <div class="footer__column">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="entreprise.html">À propos de nous</a></li>
+                        <li><a href="entreprise.html#assurance-qualite">Assurance qualité</a></li>
+                        <li><a href="entreprise.html#recherche-developpement">Recherche & Développement</a></li>
+                        <li><a href="entreprise.html#politique-environnementale">Politique environnementale</a></li>
+                        <li><a href="entreprise.html#carriere">Carrière</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h4>Produits</h4>
+                    <ul>
+                        <li><a href="produits.html#huiles-moteur">Huiles Moteur</a></li>
+                        <li><a href="produits.html#huiles-transmission">Huiles de Transmission</a></li>
+                        <li><a href="produits.html#lubrifiants-industriels">Lubrifiants Industriels</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h4>Service</h4>
+                    <ul>
+                        <li><a href="partenaires.html">Partenaires de vente</a></li>
+                        <li><a href="actualites.html">Actualités</a></li>
+                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="glossaire.html">Glossaire</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h4>Certificats</h4>
+                    <div class="certificates">
+                        <img src="images/icons/certificate-1.png" alt="Certificat EEQMS">
+                        <img src="images/icons/certificate-2.png" alt="Made in Germany">
+                        <img src="images/icons/certificate-3.png" alt="Certificat QM">
+                        <img src="images/icons/certificate-4.png" alt="Certificat GS1">
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <div class="footer__copyright">
+                    <p>© 2025 RADICO Trading GmbH. Tous droits réservés</p>
+                </div>
+                <div class="footer__social">
+                    <a href="#" aria-label="Facebook"><img src="images/icons/facebook.svg" alt="Facebook"></a>
+                    <a href="#" aria-label="Instagram"><img src="images/icons/instagram.svg" alt="Instagram"></a>
+                    <a href="#" aria-label="YouTube"><img src="images/icons/youtube.svg" alt="YouTube"></a>
+                    <a href="#" aria-label="LinkedIn"><img src="images/icons/linkedin.svg" alt="LinkedIn"></a>
+                </div>
+                <div class="footer__links">
+                    <a href="mentions-legales.html">Mentions légales</a>
+                    <a href="politique-confidentialite.html">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Notice -->
+    <div class="cookie-notice" id="cookieNotice">
+        <div class="cookie-notice__content">
+            <p>Ce site utilise des cookies pour fournir nos services. Pour plus d'informations, veuillez consulter notre <a href="politique-confidentialite.html">politique de confidentialité</a>.</p>
+            <button class="btn btn-primary" id="acceptCookies">Accepter</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/language.js"></script>
+    <script src="js/contact-form.js"></script>
+    <script src="js/faq.js"></script>
+</body>
+</html>
