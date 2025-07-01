@@ -8,14 +8,17 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header class="header">
         <div class="container">
             <div class="header__logo">
-                <a href="index.html">
-                    <img src="images/logo/basinol-logo.svg" alt="BASINOL Logo">
+                <a href="index.html" aria-label="BASINOL - Accueil">
+                    <img src="images/logo/basinol-logo.jpg" alt="BASINOL Logo" width="200" height="30">
                 </a>
             </div>
             <nav class="header__nav">
@@ -28,9 +31,9 @@
                     <li class="nav__item"><a href="index.html" class="nav__link">Accueil</a></li>
                     <li class="nav__item"><a href="entreprise.html" class="nav__link">Entreprise</a></li>
                     <li class="nav__item"><a href="produits.html" class="nav__link active">Produits</a></li>
-                    <li class="nav__item"><a href="partenaires.html" class="nav__link">Partenaires de vente</a></li>
+                    <li class="nav__item"><a href="partenaires.html" class="nav__link">Partenaires</a></li>
                     <li class="nav__item"><a href="actualites.html" class="nav__link">Actualités</a></li>
-                    <li class="nav__item"><a href="contact.html" class="nav__link">Contactez-nous</a></li>
+                    <li class="nav__item"><a href="contact.html" class="nav__link">Contact</a></li>
                 </ul>
             </nav>
             <div class="header__lang">
@@ -53,65 +56,149 @@
     <!-- Products Hero -->
     <section class="page-hero">
         <div class="container">
-            <h1>BASINOL® Lubrifiants - Protection fiable pour moteurs et machines</h1>
+            <h1>Nos Produits</h1>
+            <p class="subtitle">Protection fiable pour moteurs et machines</p>
             <p>Nos lubrifiants de haute qualité offrent une protection exceptionnelle, une efficacité améliorée et une durée de vie prolongée pour les véhicules et les équipements industriels. Que ce soit des huiles moteur, des huiles de transmission ou des lubrifiants industriels – BASINOL représente une qualité supérieure et des performances optimales.</p>
-            <ul class="features-list">
-                <li>Formulations innovantes pour des performances maximales et une protection contre l'usure</li>
-                <li>Lubrification optimale pour une durée de vie prolongée de vos machines</li>
-                <li>Lubrifiants fiables pour l'automobile, l'industrie et les applications spéciales</li>
-            </ul>
+            <div class="features-container">
+                <ul class="features-list">
+                    <li>Formulations innovantes pour des performances maximales</li>
+                    <li>Lubrification optimale pour une durée de vie prolongée</li>
+                    <li>Solutions fiables pour l'automobile et l'industrie</li>
+                </ul>
+            </div>
         </div>
     </section>
 
-    <!-- Products Image -->
-    <div class="products-image">
-        <img src="images/products/basinol-car.jpg" alt="Voiture BASINOL">
-    </div>
+    <!-- Products Overview -->
+    <section class="products-overview">
+        <div class="container">
+            <div class="product-family">
+                <img src="images/products/product-family.jpg" alt="Famille de produits BASINOL" class="product-family-image">
+                <div class="product-family-overlay">
+                    <h2>Gamme complète de lubrifiants</h2>
+                    <p>Des solutions adaptées à tous vos besoins</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Products Section -->
-    <section class="products-section">
+    <section class="products-section" id="huiles-moteur">
         <div class="container">
-            <h2 id="huiles-moteur">Huiles Moteur</h2>
-            <div class="product-content">
-                <div class="product-text">
-                    <p>Les huiles moteur BASINOL pour l'automobile et la marine sont certifiées selon les spécifications internationales les plus strictes. Les innovations et l'excellente qualité des lubrifiants BASINOL sont également reconnues par de nombreux constructeurs automobiles (OEM - Original Equipment Manufacturer). Il s'agit notamment de Mercedes-Benz, Volkswagen Group, BMW, MAN, Porsche, Scania, Volvo, MTU, Ford, PSA, Fiat Group, GM, Renault, ainsi que Jaguar et Land Rover.</p>
-                    <a href="#" class="btn btn-secondary">Voir la gamme de produits</a>
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="images/products/engine-oil.jpg" alt="Huiles Moteur BASINOL">
                 </div>
-                <div class="product-image">
-                    <img src="images/products/engine-detail.jpg" alt="Détail de moteur">
+                <div class="product-card__content">
+                    <h2>Huiles Moteur</h2>
+                    <p>Les huiles moteur BASINOL pour l'automobile et la marine sont certifiées selon les spécifications internationales les plus strictes. Les innovations et l'excellente qualité des lubrifiants BASINOL sont également reconnues par de nombreux constructeurs automobiles (OEM - Original Equipment Manufacturer).</p>
+                    
+                    <div class="product-features">
+                        <div class="product-feature">
+                            <div class="feature__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="feature__text">Protection contre l'usure</div>
+                        </div>
+                        <div class="product-feature">
+                            <div class="feature__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="feature__text">Performances optimales</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="btn btn-primary">Voir la gamme de produits</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Transmission Oils Section -->
-    <section class="products-section">
+    <section class="products-section" id="huiles-transmission">
         <div class="container">
-            <h2 id="huiles-transmission">Huiles de Transmission</h2>
-            <div class="product-content">
-                <div class="product-text">
-                    <p>Nos huiles de transmission offrent une solution fiable pour presque toutes les applications. Cela inclut les transmissions hypoïdes à charge élevée, les transmissions manuelles synchronisées et non synchronisées, les directions assistées ainsi que les transmissions de distribution des voitures, camions, tracteurs, machines forestières et de construction ainsi que les installations stationnaires.</p>
-                    <a href="#" class="btn btn-secondary">Voir la gamme de produits</a>
+            <div class="product-card reverse">
+                <div class="product-card__image">
+                    <img src="images/products/transmission-oil.jpg" alt="Huiles de Transmission BASINOL">
                 </div>
-                <div class="product-image">
-                    <img src="images/products/transmission-detail.jpg" alt="Détail de transmission">
+                <div class="product-card__content">
+                    <h2>Huiles de Transmission</h2>
+                    <p>Nos huiles de transmission offrent une solution fiable pour presque toutes les applications. Cela inclut les transmissions hypoïdes à charge élevée, les transmissions manuelles synchronisées et non synchronisées, les directions assistées ainsi que les transmissions de distribution des voitures, camions et tracteurs.</p>
+                    
+                    <div class="product-features">
+                        <div class="product-feature">
+                            <div class="feature__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="feature__text">Fiabilité maximale</div>
+                        </div>
+                        <div class="product-feature">
+                            <div class="feature__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="feature__text">Adaptabilité universelle</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="btn btn-primary">Voir la gamme de produits</a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Industrial Lubricants Section -->
-    <section class="products-section">
+    <section class="products-section" id="lubrifiants-industriels">
         <div class="container">
-            <h2 id="lubrifiants-industriels">Lubrifiants Industriels</h2>
-            <div class="product-content">
-                <div class="product-text">
-                    <p>Grâce à la combinaison idéale d'huiles de base de haute qualité et d'additifs soigneusement sélectionnés, ils maîtrisent les défis des installations modernes, tels que les conceptions compactes avec de petits volumes d'huile, les pressions de fonctionnement élevées, les traitements de surface améliorés et les conditions de température spéciales.</p>
-                    <p>Des durées de vie plus longues, une sécurité opérationnelle accrue et des réductions de coûts ne sont que quelques-uns des avantages des huiles industrielles BASINOL.</p>
-                    <a href="#" class="btn btn-secondary">Voir la gamme de produits</a>
+            <div class="product-card">
+                <div class="product-card__image">
+                    <img src="images/products/product-family.jpg" alt="Lubrifiants Industriels BASINOL">
                 </div>
-                <div class="product-image">
-                    <img src="images/products/industrial-detail.jpg" alt="Équipement industriel">
+                <div class="product-card__content">
+                    <h2>Lubrifiants Industriels</h2>
+                    <p>Grâce à la combinaison idéale d'huiles de base de haute qualité et d'additifs soigneusement sélectionnés, ils maîtrisent les défis des installations modernes, tels que les conceptions compactes avec de petits volumes d'huile, les pressions de fonctionnement élevées et les conditions de température spéciales.</p>
+                    
+                    <div class="product-features">
+                        <div class="product-feature">
+                            <div class="feature__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="feature__text">Durée de vie prolongée</div>
+                        </div>
+                        <div class="product-feature">
+                            <div class="feature__icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <div class="feature__text">Réduction des coûts</div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="btn btn-primary">Voir la gamme de produits</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Quality Section -->
+    <section class="quality-section">
+        <div class="container">
+            <div class="quality-content">
+                <h2>Qualité certifiée</h2>
+                <p>Nos produits sont reconnus par de nombreux constructeurs automobiles (OEM) dont Mercedes-Benz, Volkswagen Group, BMW, MAN, Porsche, Scania, Volvo, MTU, Ford, PSA, Fiat Group, GM, Renault, ainsi que Jaguar et Land Rover.</p>
+                <div class="quality-badges">
+                    <img src="images/icons/BASINOL_Quality_Button.png" alt="BASINOL Quality" width="100" height="100">
+                    <img src="images/icons/siegel-made-in-germany.png" alt="Made in Germany" width="100" height="100">
                 </div>
             </div>
         </div>
@@ -126,8 +213,8 @@
                     <ul>
                         <li><a href="entreprise.html">À propos de nous</a></li>
                         <li><a href="entreprise.html#assurance-qualite">Assurance qualité</a></li>
-                        <li><a href="entreprise.html#recherche-developpement">Recherche & Développement</a></li>
-                        <li><a href="entreprise.html#politique-environnementale">Politique environnementale</a></li>
+                        <li><a href="entreprise.html#recherche-developpement">R&D</a></li>
+                        <li><a href="entreprise.html#politique-environnementale">Environnement</a></li>
                         <li><a href="entreprise.html#carriere">Carrière</a></li>
                     </ul>
                 </div>
@@ -144,9 +231,9 @@
                 <div class="footer__column">
                     <h4>Service</h4>
                     <ul>
-                        <li><a href="partenaires.html">Partenaires de vente</a></li>
+                        <li><a href="partenaires.html">Partenaires</a></li>
                         <li><a href="actualites.html">Actualités</a></li>
-                        <li><a href="contact.html">Contactez-nous</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                         <li><a href="glossaire.html">Glossaire</a></li>
                     </ul>
                 </div>
@@ -154,10 +241,8 @@
                 <div class="footer__column">
                     <h4>Certificats</h4>
                     <div class="certificates">
-                        <img src="images/icons/certificate-1.png" alt="Certificat EEQMS">
-                        <img src="images/icons/certificate-2.png" alt="Made in Germany">
-                        <img src="images/icons/certificate-3.png" alt="Certificat QM">
-                        <img src="images/icons/certificate-4.png" alt="Certificat GS1">
+                        <img src="images/icons/BASINOL_Quality_Button.png" alt="BASINOL Quality" width="80" height="80">
+                        <img src="images/icons/siegel-made-in-germany.png" alt="Made in Germany" width="80" height="80">
                     </div>
                 </div>
             </div>
@@ -167,18 +252,27 @@
                     <p>© 2025 RADICO Trading GmbH. Tous droits réservés</p>
                 </div>
                 <div class="footer__social">
-                    <a href="#" aria-label="Facebook"><img src="images/icons/facebook.svg" alt="Facebook"></a>
-                    <a href="#" aria-label="Instagram"><img src="images/icons/instagram.svg" alt="Instagram"></a>
-                    <a href="#" aria-label="YouTube"><img src="images/icons/youtube.svg" alt="YouTube"></a>
-                    <a href="#" aria-label="LinkedIn"><img src="images/icons/linkedin.svg" alt="LinkedIn"></a>
-                </div>
-                <div class="footer__links">
-                    <a href="mentions-legales.html">Mentions légales</a>
-                    <a href="politique-confidentialite.html">Politique de confidentialité</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+                    <a href="#" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 2H7C4.23858 2 2 4.23858 2 7V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61991 14.1902 8.22773 13.4229 8.09406 12.5922C7.9604 11.7615 8.09206 10.9099 8.47032 10.1584C8.84858 9.40685 9.45418 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87658 12.63 8C13.4789 8.12588 14.2648 8.52146 14.8717 9.1283C15.4785 9.73515 15.8741 10.5211 16 11.37Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.5 6.5H17.51" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.54 6.42C22.4212 5.94541 22.1793 5.51057 21.8387 5.15941C21.498 4.80824 21.0708 4.55318 20.6 4.42C18.88 4 12 4 12 4C12 4 5.12 4 3.4 4.46C2.92925 4.59318 2.50198 4.84824 2.16135 5.19941C1.82072 5.55057 1.57879 5.98541 1.46 6.46C1.14521 8.20556 0.991235 9.97631 1 11.75C0.988687 13.537 1.14266 15.3213 1.46 17.08C1.59096 17.5398 1.83831 17.9581 2.17814 18.2945C2.51798 18.6308 2.93882 18.8738 3.4 19C5.12 19.46 12 19.46 12 19.46C12 19.46 18.88 19.46 20.6 19C21.0708 18.8668 21.498 18.6118 21.8387 18.2606C22.1793 17.9094 22.4212 17.4746 22.54 17C22.8524 15.2676 23.0063 13.5103 23 11.75C23.0113 9.96295 22.8573 8.1787 22.54 6.42Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9
 
     <!-- Cookie Notice -->
     <div class="cookie-notice" id="cookieNotice">

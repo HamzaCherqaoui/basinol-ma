@@ -1,6 +1,6 @@
 /* 
  * BASINOL Website - Responsive Stylesheet
- * French version
+ * French version - Elegant Apple-like Design
  */
 
 /* Note: Most responsive styles are included directly in style.css using media queries.
@@ -9,44 +9,91 @@
 /* ===== Mobile Navigation ===== */
 @media (max-width: 768px) {
 
-    /* Mobile menu toggle animation */
+    /* Mobile menu toggle animation - Refined Apple-like animation */
     .mobile-menu-toggle.active span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
+        transition: transform var(--transition-fast);
     }
 
     .mobile-menu-toggle.active span:nth-child(2) {
         opacity: 0;
+        transition: opacity var(--transition-fast);
     }
 
     .mobile-menu-toggle.active span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+        transition: transform var(--transition-fast);
     }
 
     /* Adjust header spacing on mobile */
     .header {
         padding: 0.75rem 0;
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
     }
 
     /* Ensure language switcher is visible on mobile */
     .header__lang {
-        margin-right: 3rem;
+        margin-right: 3.5rem;
+    }
+
+    /* Refined mobile navigation */
+    .nav__list {
+        background-color: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-radius: 0 0 var(--border-radius-md) var(--border-radius-md);
+        overflow: hidden;
+    }
+
+    .nav__item {
+        border-bottom: 1px solid var(--medium-gray);
+        transition: background-color var(--transition-fast);
+    }
+
+    .nav__item:last-child {
+        border-bottom: none;
+    }
+
+    .nav__item:hover {
+        background-color: var(--light-gray);
+    }
+
+    .nav__link {
+        padding: var(--spacing-md) var(--spacing-lg);
+        transition: color var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .nav__link:hover {
+        transform: translateX(5px);
     }
 }
 
 /* ===== Hero Section Responsive Adjustments ===== */
 @media (max-width: 576px) {
     .hero {
-        height: 400px;
+        height: 450px;
+        min-height: 450px;
     }
 
     .hero__content {
-        padding: 1rem;
+        padding: var(--spacing-md);
         max-width: 90%;
     }
 
     .hero__content h1 {
-        font-size: 2rem;
-        margin-bottom: 1rem;
+        font-size: 2.25rem;
+        margin-bottom: var(--spacing-md);
+        line-height: 1.1;
+    }
+
+    .hero__controls {
+        bottom: var(--spacing-lg);
+    }
+
+    .hero__dot {
+        width: 6px;
+        height: 6px;
     }
 }
 
@@ -54,6 +101,17 @@
 @media (max-width: 576px) {
     .team-grid {
         grid-template-columns: repeat(2, 1fr);
+        gap: var(--spacing-md);
+    }
+
+    .member-image {
+        box-shadow: var(--shadow-sm);
+        transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .team-member:active .member-image {
+        transform: scale(0.95);
+        box-shadow: var(--shadow-sm);
     }
 }
 
@@ -62,12 +120,56 @@
     .map-point {
         transform: translate(-50%, -50%) scale(0.8);
     }
+
+    .region-selector {
+        flex-wrap: nowrap;
+        overflow-x: auto;
+        padding-bottom: var(--spacing-sm);
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        /* Firefox */
+        -ms-overflow-style: none;
+        /* IE and Edge */
+    }
+
+    .region-selector::-webkit-scrollbar {
+        display: none;
+        /* Chrome, Safari, Opera */
+    }
+
+    .region-btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
 }
 
 /* ===== Contact Form Responsive Adjustments ===== */
 @media (max-width: 576px) {
     .contact-form-container {
-        padding: 1rem;
+        padding: var(--spacing-md);
+        border-radius: var(--border-radius-lg);
+    }
+
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        font-size: 16px;
+        /* Prevent zoom on iOS */
+        padding: var(--spacing-sm);
+        border-radius: var(--border-radius-md);
+        transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .contact-form input:focus,
+    .contact-form select:focus,
+    .contact-form textarea:focus {
+        border-color: var(--primary-color);
+        box-shadow: var(--shadow-focus);
+        outline: none;
+    }
+
+    .form-submit {
+        margin-top: var(--spacing-md);
     }
 }
 
@@ -75,7 +177,26 @@
 @media (max-width: 576px) {
     .footer__links {
         flex-direction: column;
-        gap: 0.5rem;
+        gap: var(--spacing-sm);
+        align-items: center;
+    }
+
+    .footer__column h4 {
+        font-size: 1.1rem;
+        margin-bottom: var(--spacing-sm);
+    }
+
+    .footer__column li {
+        margin-bottom: var(--spacing-xs);
+    }
+
+    .footer__social {
+        margin-top: var(--spacing-md);
+    }
+
+    .footer__social a {
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -98,6 +219,8 @@
         line-height: 1.5;
         color: #000;
         background: #fff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 
     a {
@@ -113,6 +236,8 @@
     h6 {
         page-break-after: avoid;
         page-break-inside: avoid;
+        color: #0a7a4d;
+        /* Keep brand color in print */
     }
 
     img {
@@ -129,10 +254,13 @@
         background-color: #fff;
         color: #000;
         padding: 1rem 0;
+        border-bottom: 1px solid #eee;
+        margin-bottom: 2rem;
     }
 
     .page-hero h1 {
-        color: #000;
+        color: #0a7a4d;
+        /* Keep brand color in print */
     }
 
     .product-content,
@@ -144,17 +272,46 @@
     .section-content>div {
         margin-bottom: 2rem;
     }
+
+    /* Add page breaks before major sections */
+    section {
+        page-break-before: auto;
+    }
+
+    h2 {
+        margin-top: 2rem;
+    }
 }
 
 /* ===== High Resolution Screens ===== */
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
 
-    /* Optimize images for high-resolution displays if needed */
+    /* Optimize images for high-resolution displays */
     .hero__image img,
     .category__image img,
-    .news-image img {
+    .news-image img,
+    .product-image img,
+    .section-image img {
         image-rendering: -webkit-optimize-contrast;
+    }
+
+    /* Sharper text rendering for high-res displays */
+    body {
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Refined borders for high-res displays */
+    .btn,
+    .category,
+    .news-item,
+    .partner-card,
+    .faq-item,
+    .contact-form input,
+    .contact-form select,
+    .contact-form textarea {
+        border-width: 0.5px;
     }
 }
 
@@ -169,15 +326,74 @@
 
     .hero__slide {
         transition: none;
+        transform: none !important;
+    }
+
+    .hero__content {
+        transform: none !important;
     }
 
     .category:hover,
-    .news-item:hover {
-        transform: none;
+    .news-item:hover,
+    .btn:hover,
+    .nav__link:hover,
+    .team-member:active .member-image {
+        transform: none !important;
+        box-shadow: var(--shadow-sm) !important;
     }
 
     .category:hover .category__image img,
-    .news-item:hover .news-image img {
-        transform: none;
+    .news-item:hover .news-image img,
+    .btn:hover::after,
+    .btn-icon:hover svg {
+        transform: none !important;
     }
+
+    .hero__dot.active {
+        transform: none !important;
+    }
+
+    .nav__link.active:hover::after {
+        width: 20px !important;
+    }
+}
+
+/* ===== Dark Mode Support ===== */
+@media (prefers-color-scheme: dark) {
+    :root {
+        /* Dark mode colors - Only applied if user has dark mode enabled and the site supports it */
+        --light-gray: #1a1a1c;
+        --medium-gray: #2c2c2e;
+        --subtle-gray: #8e8e93;
+    }
+
+    /* These styles will only apply if you decide to implement dark mode support */
+    /* Uncomment the following block to enable dark mode support */
+    /*
+    body {
+        background-color: #000000;
+        color: #f5f5f7;
+    }
+    
+    .header {
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .nav__link {
+        color: #f5f5f7;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        color: #f5f5f7;
+    }
+    
+    .category, 
+    .news-item,
+    .partner-card,
+    .info-card,
+    .contact-form-container {
+        background-color: #1a1a1c;
+        border-color: #2c2c2e;
+    }
+    */
 }
