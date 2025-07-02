@@ -31,7 +31,17 @@ function initHeroSlider() {
         const currentSlideElement = slides[currentSlide];
         const nextSlideElement = slides[index];
 
+        // Reset all slides first
+        slides.forEach(slide => {
+            if (slide !== currentSlideElement && slide !== nextSlideElement) {
+                slide.style.opacity = '0';
+                slide.style.zIndex = '0';
+                slide.classList.remove('active');
+            }
+        });
+
         // Set initial state for the next slide based on direction
+        nextSlideElement.style.display = 'flex'; // Ensure it's visible
         if (direction === 'next') {
             nextSlideElement.style.opacity = '0';
             nextSlideElement.style.transform = 'scale(1.05)';
@@ -63,6 +73,16 @@ function initHeroSlider() {
             // Make next slide visible with animation
             nextSlideElement.classList.add('active');
             currentSlideElement.classList.remove('active');
+
+            // Ensure proper z-index
+            nextSlideElement.style.zIndex = '1';
+            currentSlideElement.style.zIndex = '0';
+
+            // Ensure proper opacity
+            nextSlideElement.style.opacity = '1';
+
+            // Reset transform
+            nextSlideElement.style.transform = 'scale(1)';
 
             // Show content of next slide with animation
             setTimeout(() => {

@@ -99,11 +99,13 @@ function initCookieNotice() {
 
     // Check if user has already accepted cookies
     if (!localStorage.getItem('cookiesAccepted')) {
-        // Show cookie notice after a short delay with smooth animation
-        setTimeout(() => {
-            cookieNotice.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
-            cookieNotice.classList.add('show');
-        }, 1500);
+        // Show cookie notice immediately
+        cookieNotice.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
+        cookieNotice.classList.add('show');
+
+        // Make sure it's visible by setting inline styles
+        cookieNotice.style.transform = 'translateY(0)';
+        cookieNotice.style.display = 'block';
 
         // Handle accept button click with elegant animation
         acceptCookiesBtn.addEventListener('click', function () {
@@ -115,6 +117,7 @@ function initCookieNotice() {
                 cookieNotice.classList.remove('show');
                 cookieNotice.style.transform = '';
                 cookieNotice.style.opacity = '';
+                cookieNotice.style.display = 'none';
             }, 300);
         });
     }

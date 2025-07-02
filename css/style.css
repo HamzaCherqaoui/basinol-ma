@@ -223,7 +223,8 @@ section {
     display: flex;
     align-items: center;
     margin-left: auto;
-    padding-left: 200px;
+    padding-left: 220px;
+    /* Increased space for logo to push nav items right */
     /* Space for logo */
 }
 
@@ -232,8 +233,11 @@ section {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: var(--spacing-lg);
+    gap: var(--spacing-md);
+    /* Reduced spacing between nav items */
     justify-content: flex-end;
+    margin-right: 1rem;
+    /* Add some margin to the right */
 }
 
 .nav__item {
@@ -380,11 +384,14 @@ section {
 /* ===== Hero Section ===== */
 .hero {
     position: relative;
-    height: 80vh;
+    height: 100vh;
     min-height: 600px;
-    max-height: 800px;
+    max-height: none;
     overflow: hidden;
     background-color: var(--black);
+    /* Remove any potential margin/padding causing bars */
+    margin: 0;
+    padding: 0;
 }
 
 .hero__slider {
@@ -427,6 +434,10 @@ section {
     object-fit: cover;
     object-position: center;
     border-radius: 0;
+    /* Remove any potential margin/padding causing bars */
+    margin: 0;
+    padding: 0;
+    display: block;
 }
 
 .hero__image::after {
@@ -1648,10 +1659,14 @@ section {
     box-shadow: var(--shadow-lg);
     transform: translateY(100%);
     transition: transform 0.3s ease;
+    display: none;
+    /* Hide by default */
 }
 
 .cookie-notice.show {
     transform: translateY(0);
+    display: block;
+    /* Show when .show class is added */
 }
 
 .cookie-notice__content {
