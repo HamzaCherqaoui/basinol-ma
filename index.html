@@ -12,6 +12,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Preload critical hero image -->
+    <link rel="preload" href="optimized-images/packaging/Bottle_packaging.webp" as="image" type="image/webp">
 </head>
 <body>
     <!-- Header -->
@@ -19,7 +22,10 @@
         <div class="container">
             <div class="header__logo">
                 <a href="index.html" aria-label="BASINOL - Accueil">
-                    <img src="images/logo/basinol-logo.jpg" alt="BASINOL Logo" width="200" height="30">
+                    <picture>
+                        <source srcset="optimized-images/logo/basinol-logo.webp" type="image/webp">
+                        <img src="optimized-images/logo/basinol-logo.jpg" alt="BASINOL Logo" width="200" height="30">
+                    </picture>
                 </a>
             </div>
             <nav class="header__nav">
@@ -49,7 +55,10 @@
         <div class="hero__slider">
             <div class="hero__slide active">
                 <div class="hero__image">
-                    <img src="images/packaging/Bottle_packaging.JPG" alt="Packaging Huile Basinol">
+                    <picture>
+                        <source srcset="optimized-images/packaging/Bottle_packaging.webp" type="image/webp">
+                        <img src="optimized-images/packaging/Bottle_packaging.jpg" alt="Packaging Huile Basinol" width="1200" height="800">
+                    </picture>
                 </div>
                 <div class="hero__content">
                     <h1>Lubrifiants Automobiles</h1>
@@ -59,7 +68,10 @@
             </div>
             <div class="hero__slide">
                 <div class="hero__image">
-                    <img src="images/packaging/BASINOL_Production_3x2-7.jpg" alt="Huile moteur BASINOL">
+                    <picture>
+                        <source srcset="optimized-images/packaging/BASINOL_Production_3x2-7.webp" type="image/webp">
+                        <img src="optimized-images/packaging/BASINOL_Production_3x2-7.jpg" alt="Huile moteur BASINOL" width="1200" height="800">
+                    </picture>
                 </div>
                 <div class="hero__content">
                     <h1>Protection Fiable</h1>
@@ -69,7 +81,10 @@
             </div>
             <div class="hero__slide">
                 <div class="hero__image"> 
-                    <img src="images/packaging/BASINOL_Production_3x2-26.jpg" alt="Équipement industriel BASINOL">
+                    <picture>
+                        <source srcset="optimized-images/packaging/BASINOL_Production_3x2-26.webp" type="image/webp">
+                        <img src="optimized-images/packaging/BASINOL_Production_3x2-26.jpg" alt="Équipement industriel BASINOL" width="1200" height="800">
+                    </picture>
                 </div>
                 <div class="hero__content">
                     <h1>Solutions Industrielles</h1>
@@ -129,7 +144,12 @@
             <div class="categories-grid">
                 <div class="category">
                     <div class="category__image">
-                        <img src="images/products/basinol-porsche-911-start-hero-2.jpg" alt="Huiles Moteur BASINOL">
+                        <picture>
+                            <source srcset="optimized-images/products/basinol-porsche-911-start-hero-2.webp" type="image/webp">
+                            <source srcset="optimized-images/products/basinol-porsche-911-start-hero-2-400.webp" media="(max-width: 600px)" type="image/webp">
+                            <source srcset="optimized-images/products/basinol-porsche-911-start-hero-2-400.jpg" media="(max-width: 600px)" type="image/jpeg">
+                            <img src="optimized-images/products/basinol-porsche-911-start-hero-2.jpg" alt="Huiles Moteur BASINOL" width="800" height="600" loading="lazy">
+                        </picture>
                     </div>
                     <div class="category__content">
                         <h3>Huiles Moteur</h3>
@@ -140,7 +160,12 @@
                 
                 <div class="category">
                     <div class="category__image">
-                        <img src="images/products/transmission_oil.jpg" alt="Huiles de Transmission BASINOL">
+                        <picture>
+                            <source srcset="optimized-images/products/transmission_oil.webp" type="image/webp">
+                            <source srcset="optimized-images/products/transmission_oil-400.webp" media="(max-width: 600px)" type="image/webp">
+                            <source srcset="optimized-images/products/transmission_oil-400.jpg" media="(max-width: 600px)" type="image/jpeg">
+                            <img src="optimized-images/products/transmission_oil.jpg" alt="Huiles de Transmission BASINOL" width="800" height="600" loading="lazy">
+                        </picture>
                     </div>
                     <div class="category__content">
                         <h3>Huiles de Transmission</h3>
@@ -151,7 +176,12 @@
                 
                 <div class="category">
                     <div class="category__image">
-                        <img src="images/products/Industrial_lubricants.jpg" alt="Lubrifiants Industriels BASINOL">
+                        <picture>
+                            <source srcset="optimized-images/products/Industrial_lubricants.webp" type="image/webp">
+                            <source srcset="optimized-images/products/Industrial_lubricants-400.webp" media="(max-width: 600px)" type="image/webp">
+                            <source srcset="optimized-images/products/Industrial_lubricants-400.jpg" media="(max-width: 600px)" type="image/jpeg">
+                            <img src="optimized-images/products/Industrial_lubricants.jpg" alt="Lubrifiants Industriels BASINOL" width="800" height="600" loading="lazy">
+                        </picture>
                     </div>
                     <div class="category__content">
                         <h3>Lubrifiants Industriels</h3>
@@ -170,8 +200,14 @@
                 <h2>Qualité Made in Germany</h2>
                 <p>Tous nos produits sont développés et fabriqués en Allemagne selon les normes de qualité les plus strictes. Nous nous engageons à fournir des lubrifiants de première qualité qui répondent aux exigences les plus élevées de l'industrie.</p>
                 <div class="quality-badges">
-                    <img src="images/icons/BASINOL_Quality_Button.png" alt="BASINOL Quality" width="100" height="100">
-                    <img src="images/icons/siegel-made-in-germany.png" alt="Made in Germany" width="100" height="100">
+                    <picture>
+                        <source srcset="optimized-images/icons/BASINOL_Quality_Button.webp" type="image/webp">
+                        <img src="optimized-images/icons/BASINOL_Quality_Button.png" alt="BASINOL Quality" width="100" height="100" loading="lazy">
+                    </picture>
+                    <picture>
+                        <source srcset="optimized-images/icons/siegel-made-in-germany.webp" type="image/webp">
+                        <img src="optimized-images/icons/siegel-made-in-germany.png" alt="Made in Germany" width="100" height="100" loading="lazy">
+                    </picture>
                 </div>
                 <a href="entreprise.html#assurance-qualite" class="btn btn-text btn-icon">
                     En savoir plus sur notre assurance qualité
@@ -220,8 +256,14 @@
                 <div class="footer__column">
                     <h4>Certificats</h4>
                     <div class="certificates">
-                        <img src="images/icons/BASINOL_Quality_Button.png" alt="BASINOL Quality" width="80" height="80">
-                        <img src="images/icons/siegel-made-in-germany.png" alt="Made in Germany" width="80" height="80">
+                        <picture>
+                            <source srcset="optimized-images/icons/BASINOL_Quality_Button.webp" type="image/webp">
+                            <img src="optimized-images/icons/BASINOL_Quality_Button.png" alt="BASINOL Quality" width="80" height="80" loading="lazy">
+                        </picture>
+                        <picture>
+                            <source srcset="optimized-images/icons/siegel-made-in-germany.webp" type="image/webp">
+                            <img src="optimized-images/icons/siegel-made-in-germany.png" alt="Made in Germany" width="80" height="80" loading="lazy">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -277,5 +319,6 @@
     <script src="js/main.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/language.js"></script>
+    <script src="js/lazy-loading.js"></script>
 </body>
 </html>
