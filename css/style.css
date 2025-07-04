@@ -342,9 +342,20 @@ section {
 /* ===== Breadcrumb ===== */
 .breadcrumb {
     background-color: transparent;
-    padding: var(--spacing-md) 0;
-    border-bottom: 1px solid var(--medium-gray);
-    margin-bottom: var(--spacing-md);
+    padding: var(--spacing-sm) 0;
+    /* Increased from spacing-xs to spacing-sm */
+    border-bottom: none;
+    /* Removed border for seamless look */
+    margin-bottom: 0;
+    /* No margin needed */
+    position: absolute;
+    /* Position it absolutely */
+    width: 105%;
+    z-index: 10;
+    /* Ensure it's above other content but below header */
+    /* Removed blur effect as requested */
+    top: 80px;
+    /* Position it below the header */
 }
 
 .breadcrumb ul {
@@ -352,32 +363,46 @@ section {
     display: flex;
     margin: 0;
     padding: 0;
+    justify-content: flex-end;
+    /* Align to the right */
+    padding-right: var(--spacing-lg);
+    /* Add some padding on the right */
 }
 
 .breadcrumb li {
     display: flex;
     align-items: center;
-    font-size: 0.875rem;
+    font-size: 0.8rem;
+    /* Slightly increased font size */
     color: var(--subtle-gray);
+    letter-spacing: 0.02em;
+    /* Slightly increased letter spacing for elegance */
+    padding: var(--spacing-xs) 0;
+    /* Added padding to increase height */
 }
 
 .breadcrumb li:not(:last-child)::after {
-    content: '/';
-    margin: 0 var(--spacing-sm);
+    content: '›';
+    /* Changed from / to › for more elegant look */
+    margin: 0 var(--spacing-xs);
+    /* Reduced spacing */
     color: var(--medium-gray);
 }
 
 .breadcrumb a {
     color: var(--subtle-gray);
     transition: color var(--transition-fast);
+    opacity: 0.8;
+    /* Slightly transparent */
 }
 
 .breadcrumb a:hover {
-    color: var(--primary-color);
+    color: var(--white);
+    opacity: 1;
 }
 
 .breadcrumb li:last-child {
-    color: var(--primary-color);
+    color: var(--white);
     font-weight: var(--font-weight-medium);
 }
 
@@ -604,6 +629,23 @@ section {
     }
 }
 
+.page-hero {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    min-height: 750px;
+    /* Increased from 500px to 700px */
+    height: 80vh;
+    /* Added to make it take up more of the viewport */
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    /* Ensure no extra margin at the top */
+}
+
 /* ===== Page Hero ===== */
 .page-hero {
     background-color: var(--primary-color);
@@ -612,6 +654,22 @@ section {
     text-align: center;
     position: relative;
     overflow: hidden;
+    min-height: 500px;
+    /* Set to 500px for all pages except entreprise */
+    height: 60vh;
+    /* Reduced from 80vh to 60vh */
+    display: flex;
+    align-items: center;
+    margin-top: 0;
+    /* Ensure no extra margin at the top */
+}
+
+/* Special styling for entreprise page hero */
+.page-hero--entreprise {
+    min-height: 750px;
+    /* Keep the taller height for entreprise page */
+    height: 80vh;
+    /* Keep the taller height for entreprise page */
 }
 
 .page-hero::after {
@@ -623,6 +681,84 @@ section {
     height: 100%;
     background: radial-gradient(circle at center, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
     pointer-events: none;
+}
+
+.hero__video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.hero__video-background iframe {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120vw;
+    /* Increased from 100vw to 120vw to show more of the video */
+    height: 67.5vw;
+    /* Adjusted to maintain 16:9 aspect ratio (120 * 0.5625) */
+    /* 16:9 aspect ratio */
+    min-height: 120%;
+    /* Increased from 100% to 120% */
+    min-width: 213.33vh;
+    /* Adjusted to maintain 16:9 aspect ratio (120 * 1.7777) */
+    /* 16:9 aspect ratio */
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    /* Prevents clicks on the video */
+}
+
+.hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.page-hero .container {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Video Button */
+.video-btn {
+    margin-top: var(--spacing-lg);
+}
+
+.play-video {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--white);
+    font-weight: var(--font-weight-medium);
+    transition: all var(--transition-medium);
+}
+
+.play-video svg {
+    width: 48px;
+    height: 48px;
+    stroke: var(--white);
+    transition: all var(--transition-medium);
+}
+
+.play-video:hover {
+    color: var(--white);
+    opacity: 0.9;
+}
+
+.play-video:hover svg {
+    transform: scale(1.1);
 }
 
 .page-hero h1 {
@@ -725,7 +861,7 @@ section {
     text-align: center;
     margin-bottom: var(--spacing-xl);
     font-size: 2.5rem;
-    color: var(--secondary-color);
+    color: var(--white);
 }
 
 .categories-grid {
