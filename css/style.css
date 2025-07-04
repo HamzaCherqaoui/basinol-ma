@@ -986,6 +986,19 @@ section {
     background-color: var(--light-gray);
 }
 
+/* Make text white in product sections with gray background */
+.products-section:nth-child(odd) p,
+.products-section:nth-child(odd) li,
+.products-section:nth-child(odd) ul,
+.products-section:nth-child(odd) .feature__text {
+    color: var(--white);
+}
+
+/* Keep section titles green */
+.products-section:nth-child(odd) h2 {
+    color: var(--primary-color);
+}
+
 .product-card {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1066,6 +1079,14 @@ section {
     background-color: var(--light-gray);
 }
 
+.team-section h2 {
+    color: var(--primary-color);
+}
+
+.team-section h3 {
+    color: var(--white);
+}
+
 .team-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -1104,6 +1125,18 @@ section {
 
 .company-section:nth-child(even) {
     background-color: var(--light-gray);
+}
+
+/* Make text white in company sections with gray background */
+.company-section:nth-child(even) p,
+.company-section:nth-child(even) li,
+.company-section:nth-child(even) ul {
+    color: var(--white);
+}
+
+/* Keep section titles green */
+.company-section:nth-child(even) h2 {
+    color: var(--primary-color);
 }
 
 .section-content {
