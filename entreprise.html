@@ -19,7 +19,10 @@
         <div class="container">
             <div class="header__logo">
                 <a href="index.html" aria-label="BASINOL - Accueil">
-                    <img src="images/logo/basinol-logo.jpg" alt="BASINOL Logo" width="200" height="30">
+                    <picture>
+                        <source srcset="optimized-images/logo/basinol-logo.webp" type="image/webp">
+                        <img src="optimized-images/logo/basinol-logo.jpg" alt="BASINOL Logo" width="200" height="30">
+                    </picture>
                 </a>
             </div>
             <nav class="header__nav">
@@ -125,7 +128,11 @@
                     <p>Nos laboratoires internes effectuent des tests continus pour assurer la constance de la qualité et la conformité aux spécifications. Cette attention méticuleuse aux détails nous a valu la confiance de nombreux constructeurs automobiles de premier plan et d'entreprises industrielles du monde entier.</p>
                 </div>
                 <div class="section-image">
-                    <img src="images/packaging/BASINOL_Production_3x2-32.jpg" alt="Laboratoire d'assurance qualité BASINOL">
+                    <picture>
+                        <source srcset="optimized-images/packaging/BASINOL_Production_3x2-32.webp" type="image/webp">
+                        <source srcset="optimized-images/packaging/BASINOL_Production_3x2-32-600.webp" media="(max-width: 600px)" type="image/webp">
+                        <img src="optimized-images/packaging/BASINOL_Production_3x2-32.jpg" alt="Laboratoire d'assurance qualité BASINOL" width="1200" height="800" loading="lazy">
+                    </picture>
                 </div>
             </div>
         </div>
@@ -136,7 +143,11 @@
         <div class="container">
             <div class="section-content">
                 <div class="section-image">
-                    <img src="images/packaging/BASINOL_Production_3x2-48.jpg" alt="Laboratoire de recherche BASINOL">
+                    <picture>
+                        <source srcset="optimized-images/packaging/BASINOL_Production_3x2-48.webp" type="image/webp">
+                        <source srcset="optimized-images/packaging/BASINOL_Production_3x2-48-600.webp" media="(max-width: 600px)" type="image/webp">
+                        <img src="optimized-images/packaging/BASINOL_Production_3x2-48.jpg" alt="Laboratoire de recherche BASINOL" width="1200" height="800" loading="lazy">
+                    </picture>
                 </div>
                 <div class="section-text">
                     <h2>Recherche & Développement</h2>
@@ -224,8 +235,14 @@
                 <div class="footer__column">
                     <h4>Certificats</h4>
                     <div class="certificates">
-                        <img src="images/icons/BASINOL_Quality_Button.png" alt="BASINOL Quality" width="80" height="80">
-                        <img src="images/icons/siegel-made-in-germany.png" alt="Made in Germany" width="80" height="80">
+                        <picture>
+                            <source srcset="optimized-images/icons/BASINOL_Quality_Button.webp" type="image/webp">
+                            <img src="optimized-images/icons/BASINOL_Quality_Button.png" alt="BASINOL Quality" width="80" height="80" loading="lazy">
+                        </picture>
+                        <picture>
+                            <source srcset="optimized-images/icons/siegel-made-in-germany.webp" type="image/webp">
+                            <img src="optimized-images/icons/siegel-made-in-germany.png" alt="Made in Germany" width="80" height="80" loading="lazy">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -280,5 +297,6 @@
     <!-- Scripts -->
     <script src="js/main.js"></script>
     <script src="js/language.js"></script>
+    <script src="js/lazy-loading.js"></script>
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 # Create optimized versions of packaging images
 echo "Optimizing packaging images..."
-for img in images/packaging/*.jpg; do
+for img in images/packaging/*.jpg images/packaging/*.JPG; do
   filename=$(basename "$img")
   # Create a 1200px wide version (large enough for most web uses)
   sharp -i "$img" -o "optimized-images/packaging/${filename%.*}.webp" resize 1200 -q 80
