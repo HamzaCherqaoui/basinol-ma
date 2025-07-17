@@ -88,7 +88,38 @@ function initMobileMenu() {
 }
 
 /**
- * Initialize Cookie Notice with elegant animation
+ * Cookie management functions
+ */
+// Set a cookie with name, value and expiration days
+function setCookie(name, value, days) {
+    let expires = '';
+    if (days) {
+        const date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = '; expires=' + date.toUTCString();
+    }
+    document.cookie = name + '=' + (value || '') + expires + '; path=/; SameSite=Lax';
+}
+
+// Get a cookie by name
+function getCookie(name) {
+    const nameEQ = name + '=';
+    const ca = document.cookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+    }
+    return null;
+}
+
+// Delete a cookie by name
+function eraseCookie(name) {
+    document.cookie = name + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+}
+
+/**
+ * Initialize Cookie Notice with elegant animation and actual cookie functionality
  */
 function initCookieNotice() {
     const cookieNotice = document.getElementById('cookieNotice');
@@ -98,29 +129,45 @@ function initCookieNotice() {
     if (!cookieNotice || !acceptCookiesBtn) return;
 
     // Check if user has already accepted cookies
-    if (!localStorage.getItem('cookiesAccepted')) {
+    if (!getCookie('cookiesAccepted')) {
         // Show cookie notice immediately
-        cookieNotice.style.transition = 'transform 0.6s cubic-bezier(0.16, 1, 0.3, 1)';
         cookieNotice.classList.add('show');
-
-        // Make sure it's visible by setting inline styles
-        cookieNotice.style.transform = 'translateY(0)';
         cookieNotice.style.display = 'block';
 
-        // Handle accept button click with elegant animation
+        // Handle accept button click with slide down animation
         acceptCookiesBtn.addEventListener('click', function () {
-            localStorage.setItem('cookiesAccepted', 'true');
-            cookieNotice.style.transform = 'translateY(10px)';
-            cookieNotice.style.opacity = '0';
+            // Set cookies with 365 days expiration
+            setCookie('cookiesAccepted', 'true', 365);
 
+            // Set essential cookies
+            setCookie('sessionCookie', generateSessionId(), 1);
+
+            // Set analytics cookies if needed
+            setCookie('analyticsEnabled', 'true', 365);
+
+            // Also store in localStorage for backward compatibility
+            localStorage.setItem('cookiesAccepted', 'true');
+
+            // Add the hiding class to trigger the slide down animation
+            cookieNotice.classList.add('hiding');
+
+            // Remove the element after the animation completes
             setTimeout(() => {
                 cookieNotice.classList.remove('show');
-                cookieNotice.style.transform = '';
-                cookieNotice.style.opacity = '';
+                cookieNotice.classList.remove('hiding');
                 cookieNotice.style.display = 'none';
-            }, 300);
+            }, 500); // Match this with the CSS transition duration
         });
     }
+}
+
+/**
+ * Generate a random session ID
+ * @returns {string} Random session ID
+ */
+function generateSessionId() {
+    return 'session_' + Math.random().toString(36).substring(2, 15) +
+        Math.random().toString(36).substring(2, 15);
 }
 
 /**
