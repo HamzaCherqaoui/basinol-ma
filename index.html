@@ -52,54 +52,69 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero" style="position: relative; height: 100vh; min-height: 600px; max-height: none; overflow: hidden; background-color: #000;">
-        <div class="hero__slider" style="height: 100%; position: relative;">
+    <section class="hero">
+        <div class="hero__slider">
             <div class="hero__slide active" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 1; transition: opacity 1.2s cubic-bezier(0.42, 0, 0.58, 1), transform 1.2s cubic-bezier(0.42, 0, 0.58, 1); transform: scale(1); display: flex; align-items: center; justify-content: center; z-index: 1;">
-                <div class="hero__image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; transform: scale(1.02); transition: transform 8s ease-out;">
+                <div class="hero__image">
                     <picture>
-                        <source srcset="/optimized-images/packaging/Bottle_packaging.webp" type="image/webp">
-                        <img src="/optimized-images/packaging/Bottle_packaging.jpg" alt="Packaging Huile Basinol" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover; object-position: center; filter: brightness(0.9);">
+                        <source srcset="optimized-images/banners/BASINOL_BMW_M4_GT3_3D_04.webp" type="image/webp">
+                        <img src="optimized-images/banners/BASINOL_BMW_M4_GT3_3D_04.jpg" alt="Basinol BMW M4" width="1200" height="800">
                     </picture>
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)); backdrop-filter: blur(0px); transition: backdrop-filter 1.2s ease;"></div>
+                    <div class="hero__overlay"></div>
                 </div>
-                <div class="hero__content" style="text-align: center; color: #fff; padding: 2rem; max-width: 700px; position: relative; z-index: 2; transform: translateY(0); opacity: 1; transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s, opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;">
-                    <h1 style="color: #fff; font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); line-height: 1.1; font-weight: 700; letter-spacing: -0.03em;">Lubrifiants Automobiles</h1>
-                    <p class="hero__subtitle" style="color: #fff; font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9; font-weight: 400; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);">Performance et protection pour votre moteur</p>
-                    <a href="/produits/" class="btn btn-primary" style="background-color: #0a7a4d; color: #fff; padding: 0.8rem 2rem; border-radius: 30px; font-weight: 500; letter-spacing: -0.01em; transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); border: none; box-shadow: 0 4px 12px rgba(10, 122, 77, 0.3);">Découvrir maintenant</a>
+                <div class="hero__content">
+                    <h1>Lubrifiants Automobiles</h1>
+                    <p class="hero__subtitle">Performance et protection pour votre moteur</p>
+                    <a href="/produits/" class="btn btn-primary">Découvrir maintenant</a>
                 </div>
             </div>
             <div class="hero__slide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1.2s cubic-bezier(0.42, 0, 0.58, 1), transform 1.2s cubic-bezier(0.42, 0, 0.58, 1); transform: scale(1.05); display: flex; align-items: center; justify-content: center;">
-                <div class="hero__image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; transform: scale(1.02); transition: transform 8s ease-out;">
-                    <picture>
-                        <source srcset="/optimized-images/packaging/BASINOL_Production_3x2-7.webp" type="image/webp">
-                        <img src="/optimized-images/packaging/BASINOL_Production_3x2-7.jpg" alt="Huile moteur BASINOL" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover; object-position: center; filter: brightness(0.9);">
-                    </picture>
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)); backdrop-filter: blur(0px); transition: backdrop-filter 1.2s ease;"></div>
-                </div>
-                <div class="hero__content" style="text-align: center; color: #fff; padding: 2rem; max-width: 700px; position: relative; z-index: 2; transform: translateY(20px); opacity: 0; transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s, opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;">
-                    <h1 style="color: #fff; font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); line-height: 1.1; font-weight: 700; letter-spacing: -0.03em;">Protection Fiable</h1>
-                    <p class="hero__subtitle" style="color: #fff; font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9; font-weight: 400; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);">Des solutions adaptées à tous vos besoins</p>
-                    <a href="/produits/" class="btn btn-primary" style="background-color: #0a7a4d; color: #fff; padding: 0.8rem 2rem; border-radius: 30px; font-weight: 500; letter-spacing: -0.01em; transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); border: none; box-shadow: 0 4px 12px rgba(10, 122, 77, 0.3);">En savoir plus</a>
-                </div>
-            </div>
-            <div class="hero__slide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1.2s cubic-bezier(0.42, 0, 0.58, 1), transform 1.2s cubic-bezier(0.42, 0, 0.58, 1); transform: scale(1.05); display: flex; align-items: center; justify-content: center;">
-                <div class="hero__image" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; transform: scale(1.02); transition: transform 8s ease-out;">
+                <div class="hero__image">
                     <picture>
                         <source srcset="/optimized-images/packaging/BASINOL_Production_3x2-26.webp" type="image/webp">
-                        <img src="/optimized-images/packaging/BASINOL_Production_3x2-26.jpg" alt="Équipement industriel BASINOL" width="1200" height="800" style="width: 100%; height: 100%; object-fit: cover; object-position: center; filter: brightness(0.9);">
+                        <img src="/optimized-images/packaging/BASINOL_Production_3x2-26.jpg" alt="Équipement industriel BASINOL" width="1200" height="800">
                     </picture>
-                    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)); backdrop-filter: blur(0px); transition: backdrop-filter 1.2s ease;"></div>
+                    <div class="hero__overlay"></div>
                 </div>
-                <div class="hero__content" style="text-align: center; color: #fff; padding: 2rem; max-width: 700px; position: relative; z-index: 2; transform: translateY(20px); opacity: 0; transition: transform 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s, opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;">
-                    <h1 style="color: #fff; font-size: 3.5rem; margin-bottom: 1rem; text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); line-height: 1.1; font-weight: 700; letter-spacing: -0.03em;">Solutions Industrielles</h1>
-                    <p class="hero__subtitle" style="color: #fff; font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.9; font-weight: 400; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);">Optimisez la performance de vos équipements</p>
-                    <a href="/produits/" class="btn btn-primary" style="background-color: #0a7a4d; color: #fff; padding: 0.8rem 2rem; border-radius: 30px; font-weight: 500; letter-spacing: -0.01em; transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); border: none; box-shadow: 0 4px 12px rgba(10, 122, 77, 0.3);">Explorer</a>
+                <div class="hero__content">
+                    <h1>Solutions Industrielles</h1>
+                    <p class="hero__subtitle">Optimisez la performance de vos équipements</p>
+                    <a href="/produits/" class="btn btn-primary">Explorer</a>
                 </div>
             </div>
-            <div class="hero__controls" style="position: absolute; bottom: 3rem; left: 50%; transform: translateX(-50%); display: flex; gap: 1rem; z-index: 10;">
-                <span class="hero__dot active" data-slide="0" style="width: 8px; height: 8px; border-radius: 50%; background-color: #fff; cursor: pointer; opacity: 1; transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); transform: scale(1.25); border: 1px solid transparent;"></span>
-                <span class="hero__dot" data-slide="1" style="width: 8px; height: 8px; border-radius: 50%; background-color: #fff; cursor: pointer; opacity: 0.5; transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); border: 1px solid transparent;"></span>
-                <span class="hero__dot" data-slide="2" style="width: 8px; height: 8px; border-radius: 50%; background-color: #fff; cursor: pointer; opacity: 0.5; transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); border: 1px solid transparent;"></span>
+            <div class="hero__slide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1.2s cubic-bezier(0.42, 0, 0.58, 1), transform 1.2s cubic-bezier(0.42, 0, 0.58, 1); transform: scale(1.05); display: flex; align-items: center; justify-content: center;">
+                <div class="hero__image">
+                    <picture>
+                        <source srcset="/optimized-images/packaging/BASINOL_Production_3x2-7.webp" type="image/webp">
+                        <img src="/optimized-images/packaging/BASINOL_Production_3x2-7.jpg" alt="Huile moteur BASINOL" width="1200" height="800">
+                    </picture>
+                    <div class="hero__overlay"></div>
+                </div>
+                <div class="hero__content">
+                    <h1>Protection Fiable</h1>
+                    <p class="hero__subtitle">Des solutions adaptées à tous vos besoins</p>
+                    <a href="/produits/" class="btn btn-primary">En savoir plus</a>
+                </div>
+            </div>
+            <div class="hero__slide" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; opacity: 0; transition: opacity 1.2s cubic-bezier(0.42, 0, 0.58, 1), transform 1.2s cubic-bezier(0.42, 0, 0.58, 1); transform: scale(1.05); display: flex; align-items: center; justify-content: center;">
+                <div class="hero__image">
+                    <picture>
+                        <source srcset="/optimized-images/packaging/Bottle_packaging.webp" type="image/webp">
+                        <img src="/optimized-images/packaging/Bottle_packaging.png" alt="Packaging Huile Basinol" width="1200" height="800">
+                    </picture>
+                    <div class="hero__overlay"></div>
+                </div>
+                <div class="hero__content">
+                    <h1>Assurance Qualité</h1>
+                    <p class="hero__subtitle">Qualité certifiée, performance assurée</p>
+                    <a href="/produits/" class="btn btn-primary">Explorer</a>
+                </div>
+            </div>
+            <div class="hero__controls">
+                <span class="hero__dot active" data-slide="0"></span>
+                <span class="hero__dot" data-slide="1"></span>
+                <span class="hero__dot" data-slide="2"></span>
+                <span class="hero__dot" data-slide="3"></span>
             </div>
         </div>
     </section>
@@ -148,52 +163,52 @@
             <div style="display: flex; flex-direction: column; gap: 3rem; max-width: 1100px; margin: 0 auto;">
                 <!-- Huiles Moteur -->
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: stretch; background-color: #ffffff; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); transform: translateY(0);" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 8px 30px rgba(0, 0, 0, 0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0, 0, 0, 0.06)';">
-                    <div style="height: 100%; overflow: hidden; position: relative;">
-                        <picture>
+                    <div style="height: 100%; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center;">
+                        <picture style="width: 100%; height: 100%;">
                             <source srcset="/optimized-images/products/basinol-porsche-911-start-hero-2.webp" type="image/webp">
                             <source srcset="/optimized-images/products/basinol-porsche-911-start-hero-2-400.webp" media="(max-width: 600px)" type="image/webp">
                             <source srcset="/optimized-images/products/basinol-porsche-911-start-hero-2-400.jpg" media="(max-width: 600px)" type="image/jpeg">
-                            <img src="/optimized-images/products/basinol-porsche-911-start-hero-2.jpg" alt="Huiles Moteur BASINOL" width="100%" height="100%" style="object-fit: contain; transition: transform 1.2s ease;" loading="lazy" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+                            <img src="/optimized-images/products/basinol-porsche-911-start-hero-2.jpg" alt="Huiles Moteur BASINOL" width="100%" height="100%" style="object-fit: cover; position: absolute; top: 0; left: 0;" loading="lazy">
                         </picture>
                     </div>
                     <div style="padding: 3.5rem; display: flex; flex-direction: column; justify-content: center;">
                         <h3 style="font-size: 2rem; margin-bottom: 1rem; font-weight: 600; letter-spacing: -0.02em; color: #1d1d1f;">Huiles Moteur</h3>
-                        <p style="font-size: 1.1rem; line-height: 1.5; margin-bottom: 2rem; color: #424245;">Les huiles moteur BASINOL pour l'automobile et la marine sont certifiées selon les spécifications internationales les plus strictes.</p>
-                        <a href="/produits/#huiles-moteur" class="btn btn-secondary" style="align-self: flex-start; border-radius: 20px; padding: 0.8rem 1.8rem; font-weight: 500; transition: all 0.3s ease;">Voir les produits</a>
+                        <p style="font-size: 1.1rem; line-height: 1.5; margin-bottom: 0rem; color: #424245;">Les huiles moteur BASINOL pour l'automobile et la marine sont certifiées selon les spécifications internationales les plus strictes.</p>
+                        <a href="/produits/#huiles-moteur" class="btn btn-secondary" style="align-self: flex-start; border-radius: 20px; padding: 0.8rem 1.8rem; font-weight: 500; transition: all 0.3s ease; margin-top: 1rem;margin-bottom: -1rem;">Voir les produits</a>
                     </div>
                 </div>
                 
                 <!-- Huiles de Transmission -->
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: stretch; background-color: #ffffff; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); transform: translateY(0);" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 8px 30px rgba(0, 0, 0, 0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0, 0, 0, 0.06)';">
-                    <div style="height: 100%; overflow: hidden; position: relative;">
-                        <picture>
+                    <div style="height: 100%; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center;">
+                        <picture style="width: 100%; height: 100%;">
                             <source srcset="/optimized-images/products/transmission_oil.webp" type="image/webp">
                             <source srcset="/optimized-images/products/transmission_oil-400.webp" media="(max-width: 600px)" type="image/webp">
                             <source srcset="/optimized-images/products/transmission_oil-400.jpg" media="(max-width: 600px)" type="image/jpeg">
-                            <img src="/optimized-images/products/transmission_oil.jpg" alt="Huiles de Transmission BASINOL" width="100%" height="100%" style="object-fit: cover; transition: transform 1.2s ease;" loading="lazy" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+                            <img src="/optimized-images/products/transmission_oil.jpg" alt="Huiles de Transmission BASINOL" width="100%" height="100%" style="object-fit: cover; position: absolute; top: 0; left: 0;" loading="lazy">
                         </picture>
                     </div>
                     <div style="padding: 3.5rem; display: flex; flex-direction: column; justify-content: center;">
                         <h3 style="font-size: 2rem; margin-bottom: 1rem; font-weight: 600; letter-spacing: -0.02em; color: #1d1d1f;">Huiles de Transmission</h3>
-                        <p style="font-size: 1.1rem; line-height: 1.5; margin-bottom: 2rem; color: #424245;">Nos huiles de transmission offrent une solution fiable pour presque toutes les applications, des transmissions manuelles aux systèmes hydrauliques.</p>
-                        <a href="/produits/#huiles-transmission" class="btn btn-secondary" style="align-self: flex-start; border-radius: 20px; padding: 0.8rem 1.8rem; font-weight: 500; transition: all 0.3s ease;">Voir les produits</a>
+                        <p style="font-size: 1.1rem; line-height: 1.5; margin-bottom: 0rem; color: #424245;">Nos huiles de transmission offrent une solution fiable pour presque toutes les applications, des transmissions manuelles aux systèmes hydrauliques.</p>
+                        <a href="/produits/#huiles-transmission" class="btn btn-secondary" style="align-self: flex-start; border-radius: 20px; padding: 0.8rem 1.8rem; font-weight: 500; transition: all 0.3s ease;margin-top: 1rem;margin-bottom: -1rem">Voir les produits</a>
                     </div>
                 </div>
                 
                 <!-- Lubrifiants Industriels -->
                 <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0; align-items: stretch; background-color: #ffffff; border-radius: 20px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06); transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); transform: translateY(0);" onmouseover="this.style.transform='translateY(-8px)'; this.style.boxShadow='0 8px 30px rgba(0, 0, 0, 0.1)';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 20px rgba(0, 0, 0, 0.06)';">
-                    <div style="height: 100%; overflow: hidden; position: relative;">
-                        <picture>
+                    <div style="height: 100%; overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center;">
+                        <picture style="width: 100%; height: 100%;">
                             <source srcset="/optimized-images/products/Industrial_lubricants.webp" type="image/webp">
                             <source srcset="/optimized-images/products/Industrial_lubricants-400.webp" media="(max-width: 600px)" type="image/webp">
                             <source srcset="/optimized-images/products/Industrial_lubricants-400.jpg" media="(max-width: 600px)" type="image/jpeg">
-                            <img src="/optimized-images/products/Industrial_lubricants.jpg" alt="Lubrifiants Industriels BASINOL" width="100%" height="100%" style="object-fit: contain; transition: transform 1.2s ease;" loading="lazy" onmouseover="this.style.transform='scale(1.05)';" onmouseout="this.style.transform='scale(1)';">
+                            <img src="/optimized-images/products/Industrial_lubricants.jpg" alt="Lubrifiants Industriels BASINOL" width="100%" height="100%" style="object-fit: cover; position: absolute; top: 0; left: 0;" loading="lazy">
                         </picture>
                     </div>
                     <div style="padding: 3.5rem; display: flex; flex-direction: column; justify-content: center;">
                         <h3 style="font-size: 2rem; margin-bottom: 1rem; font-weight: 600; letter-spacing: -0.02em; color: #1d1d1f;">Lubrifiants Industriels</h3>
-                        <p style="font-size: 1.1rem; line-height: 1.5; margin-bottom: 2rem; color: #424245;">Grâce à la combinaison idéale d'huiles de base de haute qualité et d'additifs soigneusement sélectionnés, ils maîtrisent les défis des installations modernes.</p>
-                        <a href="/produits/#lubrifiants-industriels" class="btn btn-secondary" style="align-self: flex-start; border-radius: 20px; padding: 0.8rem 1.8rem; font-weight: 500; transition: all 0.3s ease;">Voir les produits</a>
+                        <p style="font-size: 1.1rem; line-height: 1.5; margin-bottom: -1.5rem; color: #424245;">Grâce à des huiles de base premium et des additifs sélectionnés, ils répondent aux défis des installations modernes.</p>
+                        <a href="/produits/#lubrifiants-industriels" class="btn btn-secondary" style="align-self: flex-start; border-radius: 20px; padding: 0.8rem 1.8rem; font-weight: 500; transition: all 0.3s ease;margin-top: 2.5rem;margin-bottom: -1rem">Voir les produits</a>
                     </div>
                 </div>
             </div>

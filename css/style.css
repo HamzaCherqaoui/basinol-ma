@@ -183,7 +183,7 @@ section {
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: var(--spacing-md) 0;
+    padding: 1.15rem;
     transition: background-color var(--transition-medium), box-shadow var(--transition-medium), transform var(--transition-medium);
 }
 
@@ -211,7 +211,7 @@ section {
 }
 
 .header__logo img {
-    height: 30px;
+    height: 28px;
     transition: opacity var(--transition-fast);
 }
 
@@ -478,13 +478,14 @@ section {
 .hero__content {
     text-align: center;
     color: var(--white);
-    padding: var(--spacing-xl);
-    max-width: 700px;
+    padding: var(--spacing-lg);
+    max-width: 600px;
     position: relative;
     z-index: 2;
     transform: translateY(20px);
     opacity: 0;
     transition: transform var(--transition-medium) 0.3s, opacity var(--transition-medium) 0.3s;
+    margin-top: 350px;
 }
 
 .hero__slide.active .hero__content {
@@ -494,19 +495,22 @@ section {
 
 .hero__content h1 {
     color: var(--white);
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     margin-bottom: var(--spacing-sm);
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
     line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: -0.02em;
 }
 
 .hero__subtitle {
     color: var(--white);
-    font-size: 1.25rem;
-    margin-bottom: var(--spacing-lg);
-    opacity: 0.9;
+    font-size: 1rem;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.8;
     font-weight: var(--font-weight-regular);
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.01em;
 }
 
 .hero__controls {
@@ -718,7 +722,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: none;
     z-index: 1;
 }
 
@@ -1873,6 +1877,7 @@ section {
     position: relative;
     overflow: hidden;
     z-index: 1;
+    box-shadow: none;
 }
 
 .btn::after {
@@ -1890,8 +1895,8 @@ section {
 }
 
 .btn:hover {
-    transform: translateY(-2px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-sm);
 }
 
 .btn:hover::after {
@@ -1904,13 +1909,17 @@ section {
 }
 
 .btn-primary {
-    background-color: var(--primary-color);
+    background-color: transparent;
     color: var(--white);
-    padding: var(--spacing-md) var(--spacing-xl);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    font-size: 0.9rem;
+    letter-spacing: 0.02em;
+    border: 1px solid white;
+    border-radius: 0;
 }
 
 .btn-primary:hover {
-    background-color: var(--primary-dark);
+    background-color: rgba(255, 255, 255, 0.1);
     color: var(--white);
 }
 

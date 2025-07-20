@@ -1,6 +1,6 @@
 /**
  * BASINOL Website - Hero Slider
- * French version - Elegant Apple-like Design
+ * Minimalist Apple-like Design
  */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 /**
- * Initialize Hero Slider with elegant Apple-like animations
+ * Initialize Hero Slider with minimalist Apple-like animations
  */
 function initHeroSlider() {
     const slider = document.querySelector('.hero__slider');
@@ -22,7 +22,7 @@ function initHeroSlider() {
     let isAnimating = false; // Flag to prevent animation interruption
 
     // Function to show a specific slide with refined animation
-    function showSlide(index, direction = 'next') {
+    function showSlide(index) {
         // Skip if animation is in progress
         if (isAnimating) return;
         isAnimating = true;
@@ -31,75 +31,134 @@ function initHeroSlider() {
         const currentSlideElement = slides[currentSlide];
         const nextSlideElement = slides[index];
 
-        // Reset all slides first
-        slides.forEach(slide => {
-            if (slide !== currentSlideElement && slide !== nextSlideElement) {
-                slide.style.opacity = '0';
-                slide.style.zIndex = '0';
-                slide.classList.remove('active');
-            }
-        });
+        // Check if we're wrapping around from last to first slide
+        const isWrappingAround = (currentSlide === slides.length - 1 && index === 0);
 
-        // Set initial state for the next slide based on direction
-        nextSlideElement.style.display = 'flex'; // Ensure it's visible
-        if (direction === 'next') {
-            nextSlideElement.style.opacity = '0';
-            nextSlideElement.style.transform = 'scale(1.05)';
-            nextSlideElement.style.zIndex = '1';
-        } else {
-            nextSlideElement.style.opacity = '0';
-            nextSlideElement.style.transform = 'scale(0.95)';
-            nextSlideElement.style.zIndex = '1';
-        }
-
-        // Hide content of current slide with animation
-        if (currentSlideElement.querySelector('.hero__content')) {
-            currentSlideElement.querySelector('.hero__content').style.opacity = '0';
-            currentSlideElement.querySelector('.hero__content').style.transform = 'translateY(20px)';
-        }
-
-        // Show the next slide
-        setTimeout(() => {
-            // Deactivate all dots
-            dots.forEach(dot => {
-                dot.classList.remove('active');
+        // Handle wrap-around case specially
+        if (isWrappingAround) {
+            // Immediately hide all other slides except current and next
+            slides.forEach((slide, i) => {
+                if (i !== currentSlide && i !== index) {
+                    slide.style.opacity = '0';
+                    slide.style.zIndex = '0';
+                    slide.style.display = 'none';
+                    slide.classList.remove('active');
+                }
             });
 
-            // Activate the corresponding dot
-            if (dots[index]) {
-                dots[index].classList.add('active');
+            // Set initial state for the first slide
+            nextSlideElement.style.display = 'flex';
+            nextSlideElement.style.opacity = '0';
+            nextSlideElement.style.zIndex = '1';
+
+            // Hide content of current slide with subtle animation
+            if (currentSlideElement.querySelector('.hero__content')) {
+                currentSlideElement.querySelector('.hero__content').style.opacity = '0';
             }
 
-            // Make next slide visible with animation
-            nextSlideElement.classList.add('active');
-            currentSlideElement.classList.remove('active');
+            // Fade out current slide first
+            currentSlideElement.style.opacity = '0';
 
-            // Ensure proper z-index
-            nextSlideElement.style.zIndex = '1';
-            currentSlideElement.style.zIndex = '0';
-
-            // Ensure proper opacity
-            nextSlideElement.style.opacity = '1';
-
-            // Reset transform
-            nextSlideElement.style.transform = 'scale(1)';
-
-            // Show content of next slide with animation
+            // Then show the first slide after a short delay
             setTimeout(() => {
-                if (nextSlideElement.querySelector('.hero__content')) {
-                    nextSlideElement.querySelector('.hero__content').style.opacity = '1';
-                    nextSlideElement.querySelector('.hero__content').style.transform = 'translateY(0)';
+                // Update dots
+                dots.forEach(dot => {
+                    dot.classList.remove('active');
+                    dot.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+                    dot.style.transform = 'scale(1)';
+                });
+
+                if (dots[index]) {
+                    dots[index].classList.add('active');
+                    dots[index].style.backgroundColor = '#ffffff';
+                    dots[index].style.transform = 'scale(1.2)';
                 }
 
-                // Reset animation flag after animation completes
-                setTimeout(() => {
-                    isAnimating = false;
-                }, 500);
-            }, 300);
+                // Make first slide visible
+                nextSlideElement.classList.add('active');
+                currentSlideElement.classList.remove('active');
+                nextSlideElement.style.opacity = '1';
 
-            // Update current slide index
-            currentSlide = index;
-        }, 100);
+                // Show content of first slide
+                setTimeout(() => {
+                    if (nextSlideElement.querySelector('.hero__content')) {
+                        nextSlideElement.querySelector('.hero__content').style.opacity = '1';
+                    }
+
+                    // Reset animation flag
+                    setTimeout(() => {
+                        isAnimating = false;
+                    }, 300);
+                }, 200);
+
+                // Update current slide index
+                currentSlide = index;
+            }, 400); // Longer delay for wrap-around transition
+        } else {
+            // Normal transition between adjacent slides
+
+            // Reset all slides first
+            slides.forEach(slide => {
+                if (slide !== currentSlideElement && slide !== nextSlideElement) {
+                    slide.style.opacity = '0';
+                    slide.style.zIndex = '0';
+                    slide.classList.remove('active');
+                }
+            });
+
+            // Set initial state for the next slide
+            nextSlideElement.style.display = 'flex'; // Ensure it's visible
+            nextSlideElement.style.opacity = '0';
+            nextSlideElement.style.zIndex = '1';
+
+            // Hide content of current slide with subtle animation
+            if (currentSlideElement.querySelector('.hero__content')) {
+                currentSlideElement.querySelector('.hero__content').style.opacity = '0';
+            }
+
+            // Show the next slide
+            setTimeout(() => {
+                // Deactivate all dots
+                dots.forEach(dot => {
+                    dot.classList.remove('active');
+                    dot.style.backgroundColor = 'rgba(255, 255, 255, 0.5)';
+                    dot.style.transform = 'scale(1)';
+                });
+
+                // Activate the corresponding dot
+                if (dots[index]) {
+                    dots[index].classList.add('active');
+                    dots[index].style.backgroundColor = '#ffffff';
+                    dots[index].style.transform = 'scale(1.2)';
+                }
+
+                // Make next slide visible with subtle animation
+                nextSlideElement.classList.add('active');
+                currentSlideElement.classList.remove('active');
+
+                // Ensure proper z-index
+                nextSlideElement.style.zIndex = '1';
+                currentSlideElement.style.zIndex = '0';
+
+                // Ensure proper opacity
+                nextSlideElement.style.opacity = '1';
+
+                // Show content of next slide with subtle animation
+                setTimeout(() => {
+                    if (nextSlideElement.querySelector('.hero__content')) {
+                        nextSlideElement.querySelector('.hero__content').style.opacity = '1';
+                    }
+
+                    // Reset animation flag after animation completes
+                    setTimeout(() => {
+                        isAnimating = false;
+                    }, 300);
+                }, 200);
+
+                // Update current slide index
+                currentSlide = index;
+            }, 100);
+        }
     }
 
     // Function to show the next slide
@@ -108,7 +167,7 @@ function initHeroSlider() {
         if (next >= slides.length) {
             next = 0;
         }
-        showSlide(next, 'next');
+        showSlide(next);
     }
 
     // Function to show the previous slide
@@ -117,7 +176,7 @@ function initHeroSlider() {
         if (prev < 0) {
             prev = slides.length - 1;
         }
-        showSlide(prev, 'prev');
+        showSlide(prev);
     }
 
     // Start automatic slideshow with refined timing
@@ -131,7 +190,7 @@ function initHeroSlider() {
         slideInterval = setInterval(nextSlide, 6000); // Change slide every 6 seconds
     }
 
-    // Pause slideshow on hover with subtle transition
+    // Pause slideshow on hover
     slider.addEventListener('mouseenter', function () {
         if (slideInterval) {
             clearInterval(slideInterval);
@@ -143,68 +202,49 @@ function initHeroSlider() {
         startSlideshow();
     });
 
-    // Add click event to dots with refined interaction
+    // Add click event to dots
     dots.forEach((dot, index) => {
         dot.addEventListener('click', function () {
-            // Determine direction based on index
-            const direction = index > currentSlide ? 'next' : 'prev';
-            showSlide(index, direction);
-
+            showSlide(index);
             // Restart the slideshow timer when manually changing slides
             startSlideshow();
         });
     });
 
-    // Add keyboard navigation with improved accessibility
+    // Add keyboard navigation
     document.addEventListener('keydown', function (e) {
-        // Only handle keyboard navigation if the slider is in the viewport
-        if (isInViewport(slider)) {
-            if (e.key === 'ArrowLeft') {
-                prevSlide();
-                startSlideshow();
-            } else if (e.key === 'ArrowRight') {
-                nextSlide();
-                startSlideshow();
-            }
+        if (e.key === 'ArrowLeft') {
+            prevSlide();
+            startSlideshow();
+        } else if (e.key === 'ArrowRight') {
+            nextSlide();
+            startSlideshow();
         }
     });
 
-    // Add swipe support for touch devices with improved sensitivity
+    // Add swipe support for touch devices
     let touchStartX = 0;
     let touchEndX = 0;
-    let touchStartY = 0;
-    let touchEndY = 0;
 
     slider.addEventListener('touchstart', function (e) {
         touchStartX = e.changedTouches[0].screenX;
-        touchStartY = e.changedTouches[0].screenY;
     }, { passive: true });
 
     slider.addEventListener('touchend', function (e) {
         touchEndX = e.changedTouches[0].screenX;
-        touchEndY = e.changedTouches[0].screenY;
         handleSwipe();
     }, { passive: true });
 
     function handleSwipe() {
-        const swipeThreshold = 40; // Lower threshold for more responsive swipes
-        const verticalThreshold = 80; // Threshold to detect vertical scrolling
-
-        // Calculate horizontal and vertical distance
-        const horizontalDistance = touchEndX - touchStartX;
-        const verticalDistance = Math.abs(touchEndY - touchStartY);
-
-        // Only process horizontal swipes (ignore vertical scrolling)
-        if (verticalDistance < verticalThreshold) {
-            if (horizontalDistance < -swipeThreshold) {
-                // Swipe left, show next slide
-                nextSlide();
-                startSlideshow();
-            } else if (horizontalDistance > swipeThreshold) {
-                // Swipe right, show previous slide
-                prevSlide();
-                startSlideshow();
-            }
+        const swipeThreshold = 50;
+        if (touchEndX < touchStartX - swipeThreshold) {
+            // Swipe left, show next slide
+            nextSlide();
+            startSlideshow();
+        } else if (touchEndX > touchStartX + swipeThreshold) {
+            // Swipe right, show previous slide
+            prevSlide();
+            startSlideshow();
         }
     }
 
@@ -213,12 +253,12 @@ function initHeroSlider() {
         const prevArrow = document.createElement('button');
         prevArrow.className = 'hero__nav hero__nav--prev';
         prevArrow.setAttribute('aria-label', 'Diapositive précédente');
-        prevArrow.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+        prevArrow.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
 
         const nextArrow = document.createElement('button');
         nextArrow.className = 'hero__nav hero__nav--next';
         nextArrow.setAttribute('aria-label', 'Diapositive suivante');
-        nextArrow.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+        nextArrow.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>';
 
         slider.appendChild(prevArrow);
         slider.appendChild(nextArrow);
@@ -240,25 +280,37 @@ function initHeroSlider() {
     // Initialize the slider with first slide
     slides[0].classList.add('active');
     dots[0].classList.add('active');
+    dots[0].style.backgroundColor = '#ffffff';
+    dots[0].style.transform = 'scale(1.2)';
 
     // Show content of first slide with animation
     setTimeout(() => {
         if (slides[0].querySelector('.hero__content')) {
             slides[0].querySelector('.hero__content').style.opacity = '1';
-            slides[0].querySelector('.hero__content').style.transform = 'translateY(0)';
         }
-    }, 300);
+    }, 200);
 
     // Start slideshow
     startSlideshow();
+}
 
-    // Add resize handler to ensure proper layout with debounce for performance
-    window.addEventListener('resize', debounce(function () {
-        // Recalculate slider dimensions if needed
-        const currentSlideElement = slides[currentSlide];
-        if (currentSlideElement) {
-            // Ensure proper sizing and positioning
-            currentSlideElement.classList.add('active');
-        }
-    }, 150)); // Reduced debounce time for more responsive resizing
+// Helper function to check if element is in viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Debounce function for performance optimization
+function debounce(func, wait) {
+    let timeout;
+    return function () {
+        const context = this, args = arguments;
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(context, args), wait);
+    };
 }
