@@ -67,6 +67,15 @@
     .nav__link:hover {
         transform: translateX(5px);
     }
+
+    /* Product categories responsive adjustments for horizontal layout */
+    [style*="display: grid; grid-template-columns: 1fr 1fr;"] {
+        grid-template-columns: 1fr !important;
+    }
+
+    [style*="height: 100%; overflow: hidden;"] {
+        height: 250px !important;
+    }
 }
 
 /* ===== Hero Section Responsive Adjustments ===== */

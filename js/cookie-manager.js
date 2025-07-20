@@ -183,28 +183,25 @@ document.addEventListener('DOMContentLoaded', function () {
     // Check if cookie notice exists
     if (!cookieNotice || !acceptCookiesBtn) return;
 
-    // Check if user has already accepted cookies
-    if (!cookieManager.hasAcceptedCookies()) {
-        // Show cookie notice
-        cookieNotice.classList.add('show');
-        cookieNotice.style.display = 'block';
+    // Automatically accept all cookies
+    cookieManager.acceptAllCookies();
 
-        // Handle accept button click
-        acceptCookiesBtn.addEventListener('click', function () {
-            // Accept all cookies
-            cookieManager.acceptAllCookies();
+    // Show cookie notice (just for information)
+    cookieNotice.classList.add('show');
+    cookieNotice.style.display = 'block';
 
-            // Add the hiding class to trigger the slide down animation
-            cookieNotice.classList.add('hiding');
+    // Handle close button click
+    acceptCookiesBtn.addEventListener('click', function () {
+        // Add the hiding class to trigger the slide down animation
+        cookieNotice.classList.add('hiding');
 
-            // Remove the element after the animation completes
-            setTimeout(() => {
-                cookieNotice.classList.remove('show');
-                cookieNotice.classList.remove('hiding');
-                cookieNotice.style.display = 'none';
-            }, 500);
-        });
-    }
+        // Remove the element after the animation completes
+        setTimeout(() => {
+            cookieNotice.classList.remove('show');
+            cookieNotice.classList.remove('hiding');
+            cookieNotice.style.display = 'none';
+        }, 500);
+    });
 });
 
 // Make cookieManager available globally
