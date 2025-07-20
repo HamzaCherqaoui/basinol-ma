@@ -186,12 +186,18 @@ document.addEventListener('DOMContentLoaded', function () {
     // Automatically accept all cookies
     cookieManager.acceptAllCookies();
 
-    // Show cookie notice (just for information)
-    cookieNotice.classList.add('show');
-    cookieNotice.style.display = 'block';
+    // Check if user has already closed the cookie notice
+    if (!cookieManager.getCookie('cookieNoticeClosed')) {
+        // Show cookie notice (just for information)
+        cookieNotice.classList.add('show');
+        cookieNotice.style.display = 'block';
+    }
 
     // Handle close button click
     acceptCookiesBtn.addEventListener('click', function () {
+        // Set cookie to remember that notice was closed
+        cookieManager.setCookie('cookieNoticeClosed', 'true', 365);
+
         // Add the hiding class to trigger the slide down animation
         cookieNotice.classList.add('hiding');
 
