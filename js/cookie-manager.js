@@ -183,8 +183,24 @@ document.addEventListener('DOMContentLoaded', function () {
     // Check if cookie notice exists
     if (!cookieNotice || !acceptCookiesBtn) return;
 
-    // Automatically accept all cookies
+    // Automatically accept all cookies and ensure analytics is initialized
     cookieManager.acceptAllCookies();
+
+    // Force initialize analytics immediately
+    if (window.analyticsManager && !window.analyticsManager.initialized) {
+        window.analyticsManager.initialize();
+    } else {
+        // If analyticsManager is not available yet, wait for it
+        const checkAnalytics = setInterval(() => {
+            if (window.analyticsManager) {
+                window.analyticsManager.initialize();
+                clearInterval(checkAnalytics);
+            }
+        }, 100);
+
+        // Clear interval after 5 seconds to prevent infinite checking
+        setTimeout(() => clearInterval(checkAnalytics), 5000);
+    }
 
     // Check if user has already closed the cookie notice
     if (!cookieManager.getCookie('cookieNoticeClosed')) {
