@@ -6,7 +6,7 @@
 /* ===== Variables ===== */
 :root {
     /* Colors - Refined, Apple-like palette */
-    --primary-color: #0a7a4d;
+    --primary-color: #006C32;
     /* Refined BASINOL Green */
     --primary-light: #1a8a5d;
     /* Lighter Green for subtle elements */
@@ -56,7 +56,7 @@
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.05);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.08);
     --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
-    --shadow-focus: 0 0 0 3px rgba(10, 122, 77, 0.2);
+    --shadow-focus: 0 0 0 3px rgba(0, 108, 50, 0.2);
 
     /* Transitions */
     --transition-fast: 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
@@ -1199,7 +1199,7 @@ section {
     justify-content: center;
     width: 32px;
     height: 32px;
-    background-color: rgba(10, 122, 77, 0.1);
+    background-color: rgba(0, 108, 50, 0.1);
     border-radius: 50%;
     color: var(--primary-color);
 }
@@ -1529,7 +1529,7 @@ section {
 .product-feature .feature__icon {
     width: 40px;
     height: 40px;
-    background-color: rgba(10, 122, 77, 0.1);
+    background-color: rgba(0, 108, 50, 0.1);
 }
 
 .product-feature .feature__text {
@@ -2072,6 +2072,11 @@ section {
     border: 1px solid var(--light-gray);
     border-radius: var(--border-radius-md);
     overflow: hidden;
+    transition: box-shadow 0.3s ease;
+}
+
+.faq-item.active {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 .faq-question {
@@ -2122,16 +2127,18 @@ section {
 }
 
 .faq-answer {
-    padding: 0;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.3s ease, padding 0.3s ease;
+    padding: 0 var(--spacing-md);
+    background-color: var(--white);
+    transition: max-height 0.4s ease, padding-top 0.3s ease, padding-bottom 0.3s ease;
 }
 
 .faq-item.active .faq-answer {
-    padding: var(--spacing-md);
+    padding-top: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
     max-height: 500px;
-    background-color: var(--white);
+    /* enough space to allow animation */
 }
 
 /* ===== Quality Section ===== */
@@ -2395,7 +2402,7 @@ section {
 }
 
 .btn-secondary:hover {
-    background-color: rgba(10, 122, 77, 0.05);
+    background-color: rgba(0, 108, 50, 0.05);
     color: var(--primary-dark);
     border-color: var(--primary-dark);
 }
@@ -2408,7 +2415,7 @@ section {
 }
 
 .btn-text:hover {
-    background-color: rgba(10, 122, 77, 0.05);
+    background-color: rgba(0, 108, 50, 0.05);
     box-shadow: none;
 }
 
@@ -2444,7 +2451,7 @@ section {
 }
 
 .btn-secondary:hover {
-    background-color: rgba(10, 122, 77, 0.05);
+    background-color: rgba(0, 108, 50, 0.05);
     color: var(--primary-dark);
     border-color: var(--primary-dark);
 }
@@ -2542,7 +2549,7 @@ section {
 }
 
 .apple-btn-outline:hover {
-    background-color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.1);
     color: var(--white);
 }
 
@@ -2767,7 +2774,7 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(10, 122, 77, 0.8);
+    background-color: rgba(0, 108, 50, 0.8);
     z-index: 1;
 }
 
@@ -2804,10 +2811,11 @@ section {
 }
 
 .product-hero__text {
-    font-size: 1.25rem;
+    font-size: 1.08rem;
     line-height: 1.6;
     color: white;
     margin-bottom: 2rem;
+    width: 1100px;
 }
 
 .product-hero__features {
@@ -2870,7 +2878,7 @@ section {
 }
 
 .product-categories {
-    padding: 5rem 0;
+    padding: 2rem 0;
     background-color: #fff;
 }
 
