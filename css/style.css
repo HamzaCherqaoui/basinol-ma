@@ -2548,8 +2548,18 @@ section {
     border: 1px solid var(--primary-color);
 }
 
+.apple-btn-outline-green {
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
 .apple-btn-outline:hover {
     background-color: rgba(255, 255, 255, 0.1);
+    color: var(--white);
+}
+
+.apple-btn-outline-green:hover {
+    background-color: var(--primary-color);
     color: var(--white);
 }
 
