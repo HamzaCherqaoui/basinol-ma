@@ -1,0 +1,1 @@
+Always put new CSS styling in the css folder, preferrable in the style.css file.

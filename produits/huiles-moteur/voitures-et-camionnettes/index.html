@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="/images/logo/BASINOL_Logo_Social_Icon_White.jpg">
+    <title>BASINOL - Huiles Moteur pour Voitures et Camionnettes | Performance et Protection</title>
+    <meta name="description" content="Découvrez notre gamme d'huiles moteur BASINOL de haute qualité pour voitures et camionnettes. Performance optimale et protection exceptionnelle pour les moteurs essence et diesel.">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/cookie-notice.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@400;500;600;700&family=SF+Pro+Text:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .product-card {
+            background-color: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-card__content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .product-card__title {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 0.75rem;
+        }
+        
+        .product-card__text {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: var(--secondary-color);
+            margin-bottom: 1.5rem;
+            flex-grow: 1;
+        }
+        
+        .product-card__link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 500;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            margin-top: auto;
+        }
+        
+        .product-card__link:hover {
+            color: var(--primary-dark);
+        }
+        
+        .product-card__link svg {
+            transition: transform 0.2s ease;
+        }
+        
+        .product-card__link:hover svg {
+            transform: translateX(3px);
+        }
+        
+        @media (max-width: 992px) {
+            .product-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .product-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__logo">
+                <a href="/" aria-label="BASINOL - Accueil">
+                    <picture>
+                        <source srcset="/optimized-images/logo/basinol-logo.webp" type="image/webp">
+                        <img src="/optimized-images/logo/basinol-logo.jpg" alt="BASINOL Logo" width="200" height="30">
+                    </picture>
+                </a>
+            </div>
+            <nav class="header__nav">
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="/" class="nav__link">Accueil</a></li>
+                    <li class="nav__item"><a href="/entreprise/" class="nav__link">Entreprise</a></li>
+                    <li class="nav__item has-dropdown">
+                        <a href="/produits/" class="nav__link active">Produits</a>
+                        <div class="dropdown">
+                            <div class="dropdown-container">
+                                <div class="dropdown-column">
+                                    <div class="dropdown-section">
+                                        <a href="/produits/huiles-moteur/" class="dropdown-title">Huiles Moteur</a>
+                                        <ul class="dropdown-list">
+                                            <li class="dropdown-item"><a href="/produits/huiles-moteur/#voitures-camionnettes" class="dropdown-link">Voitures et camionnettes</a></li>
+                                            <li class="dropdown-item"><a href="/produits/huiles-moteur/#vehicules-commerciaux" class="dropdown-link">Véhicules commerciaux et équipements stationnaires</a></li>
+                                            <li class="dropdown-item"><a href="/produits/huiles-moteur/#moto" class="dropdown-link">Moto</a></li>
+                                            <li class="dropdown-item"><a href="/produits/huiles-moteur/#fluides-fonctionnels" class="dropdown-link">Fluides fonctionnels</a></li>
+                                            <li class="dropdown-item"><a href="/produits/huiles-moteur/#additifs" class="dropdown-link">Additifs</a></li>
+                                            <li class="dropdown-item"><a href="/produits/huiles-moteur/#navires-bateaux" class="dropdown-link">Navires et bateaux</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="dropdown-column">
+                                    <div class="dropdown-section">
+                                        <a href="/produits/huiles-transmission/" class="dropdown-title">Huiles de Transmission</a>
+                                        <ul class="dropdown-list">
+                                            <li class="dropdown-item"><a href="/produits/huiles-transmission/#automatique" class="dropdown-link">Huiles de transmission automatique</a></li>
+                                            <li class="dropdown-item"><a href="/produits/huiles-transmission/#transmission" class="dropdown-link">Huiles de transmission</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="dropdown-column">
+                                    <div class="dropdown-section">
+                                        <a href="/produits/lubrifiants-industriels/" class="dropdown-title">Lubrifiants Industriels</a>
+                                        <ul class="dropdown-list">
+                                            <li class="dropdown-item"><a href="/produits/lubrifiants-industriels/#hydrauliques" class="dropdown-link">Huiles hydrauliques</a></li>
+                                            <li class="dropdown-item"><a href="/produits/lubrifiants-industriels/#engrenages" class="dropdown-link">Huiles pour engrenages industriels</a></li>
+                                            <li class="dropdown-item"><a href="/produits/lubrifiants-industriels/#metalworking" class="dropdown-link">Huiles de travail des métaux</a></li>
+                                            <li class="dropdown-item"><a href="/produits/lubrifiants-industriels/#graisses" class="dropdown-link">Graisses</a></li>
+                                            <li class="dropdown-item"><a href="/produits/lubrifiants-industriels/#compresseurs" class="dropdown-link">Huiles pour compresseurs</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav__item"><a href="/partenaires/" class="nav__link">Partenaires</a></li>
+                    <li class="nav__item"><a href="/actualités/" class="nav__link">Actualités</a></li>
+                    <li class="nav__item"><a href="/contact/" class="nav__link">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header__lang">
+                <button class="lang-btn active" data-lang="fr">FR</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <div class="container">
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                <li><a href="/produits/">Produits</a></li>
+                <li><a href="/produits/huiles-moteur/">Huiles Moteur</a></li>
+                <li>Voitures et camionnettes</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="product-hero" style="background-image: url('/optimized-images/packaging/BASINOL_Porsche_911_GT3_Cup_3D_07.webp'); background-size: cover; background-position: center; position: relative; padding: 5rem 0 3rem;">
+        <div class="product-hero-overlay"></div>
+        <div class="container">
+            <div class="product-hero__content" style="max-width: 900px; margin-left: 0; padding-left: 0; padding-top: 0;">
+                <h1 class="product-hero__title">Huiles Moteur BASINOL<sup>®</sup> pour Voitures et Camionnettes</h1>
+                <p class="product-hero__text">Les huiles moteur BASINOL pour voitures et camionnettes offrent une protection optimale et une efficacité maximale pour les moteurs essence et diesel. Nos lubrifiants haute performance spécialement développés garantissent une durée de vie prolongée du moteur, réduisent les frottements et améliorent l'efficacité énergétique.</p>
+                
+                <ul style="margin-top: 2rem; margin-bottom: 2rem; list-style: none; padding-left: 0; font-size: 1.15rem;">
+                    <li style="margin-bottom: 0.75rem; color: white; display: flex; align-items: center;">
+                        <span style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background-color: white; margin-right: 0.75rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="#0D8A3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        Protection et performance pour les technologies de moteurs modernes
+                    </li>
+                    <li style="margin-bottom: 0.75rem; color: white; display: flex; align-items: center;">
+                        <span style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background-color: white; margin-right: 0.75rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="#0D8A3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        Lubrification optimale dans toutes les conditions de conduite
+                    </li>
+                    <li style="margin-bottom: 0.75rem; color: white; display: flex; align-items: center;">
+                        <span style="display: inline-flex; align-items: center; justify-content: center; width: 24px; height: 24px; border-radius: 50%; background-color: white; margin-right: 0.75rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 6L9 17L4 12" stroke="#0D8A3E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </span>
+                        Approuvées par les principaux constructeurs automobiles
+                    </li>
+                </ul>
+                
+                <a href="/contact/" class="apple-btn apple-btn-outline" style="color: white; border-color: white;">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="apple-btn-icon">
+                        <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Contactez-nous
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="product-categories">
+        <div class="container">
+            <div class="product-bottle-grid">
+                <!-- BASINOL Premium 016 LX -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/premium-016-lx">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Premium-016-LX.webp" alt="BASINOL Premium 016 LX" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Premium 016 LX</h3>
+                    <p>Huile moteur synthétique à faible friction pour moteurs à essence et véhicules HYBRIDES</p>
+                    <a href="/produits/huiles-moteur/voitures-et-camionnettes/premium-016-lx" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Premium 020 PRO -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/premium-020-pro">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Premium-020-PRO.webp" alt="BASINOL Premium 020 PRO" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Premium 020 PRO</h3>
+                    <p>Huile moteur synthétique à faible friction pour moteurs essence et diesel avec propriétés d'économie de carburant</p>
+                    <a href="/produits/huiles-moteur/voitures-et-camionnettes/premium-020-pro" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Longlife ECO 020 -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/longlife-eco-020">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Longlife-ECO-020.webp" alt="BASINOL Longlife ECO 020" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Longlife ECO 020</h3>
+                    <p>Huile moteur synthétique à faible friction pour moteurs essence et diesel avec propriétés d'économie de carburant</p>
+                    <a href="/produits/huiles-moteur/voitures-et-camionnettes/longlife-eco-020" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Premium Energy 020 -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/premium-energy-020">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Premium-Energy-020.webp" alt="BASINOL Premium Energy 020" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Premium Energy 020</h3>
+                    <p>Huile moteur synthétique pour moteurs à essence des véhicules hybrides avec propriétés d'économie de carburant</p>
+                    <a href="/produits/huiles-moteur/voitures-et-camionnettes/premium-energy-020" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Longlife 030 PRO -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/longlife-030-pro">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Longlife-030-PRO.webp" alt="BASINOL Longlife 030 PRO" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Longlife 030 PRO</h3>
+                    <p>Huile moteur synthétique à faible friction pour moteurs essence et diesel avec et sans turbocompresseur et injection directe</p>
+                    <a href="/produits/huiles-moteur/voitures-et-camionnettes/longlife-030-pro" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Premium 030 LA -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/premium-030-la">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Premium-030-LA.webp" alt="BASINOL Premium 030 LA" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Premium 030 LA</h3>
+                    <p>Huile moteur synthétique à faible friction pour moteurs essence et diesel modernes avec systèmes de post-traitement</p>
+                    <a href="/produits/huiles-moteur/voitures-et-camionnettes/premium-030-la" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Premium 040 SX -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/premium-040-sx">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Premium-040-SX.webp" alt="BASINOL Premium 040 SX" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Premium 040 SX</h3>
+                    <p>Huile moteur synthétique à faible friction pour moteurs essence et diesel de voitures particulières</p>
+                    <a href="#" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Premium Energy 0520 -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/premium-energy-0520">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Premium-Energy-0520.webp" alt="BASINOL Premium Energy 0520" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Premium Energy 0520</h3>
+                    <p>Huile moteur économe en carburant de grade SAE 5W-20 avec viscosité HTHS réduite</p>
+                    <a href="#" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Premium 0530 PRO -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/premium-0530-pro">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Premium-0530-PRO.webp" alt="BASINOL Premium 0530 PRO" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Premium 0530 PRO</h3>
+                    <p>Huile moteur longue durée ultra-haute performance pour moteurs récents avec technologie de synthèse avancée</p>
+                    <a href="#" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Superior 0530 -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/superior-0530">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Superior-0530.webp" alt="BASINOL Superior 0530" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Superior 0530</h3>
+                    <p>Huile moteur multigrade synthétique pour moteurs à essence</p>
+                    <a href="#" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Power Longlife 0530 -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/power-longlife-0530">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Power-Longlife-0530.webp" alt="BASINOL Power Longlife 0530" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Power Longlife 0530</h3>
+                    <p>Huile moteur économe en carburant avec caractère Longlife de grade SAE 5W-30</p>
+                    <a href="#" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Power Syn 0530 C4 -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/power-syn-0530-c4">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Power-Syn-0530-C4.webp" alt="BASINOL Power Syn 0530 C4" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Power Syn 0530 C4</h3>
+                    <p>Huile moteur synthétique à faible friction pour moteurs essence et diesel avec post-traitement des gaz d'échappement</p>
+                    <a href="#" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Premium Longlife 0530 DX -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/premium-longlife-0530-dx">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Premium-Longlife-0530-DX.webp" alt="BASINOL Premium Longlife 0530 DX" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Premium Longlife 0530 DX</h3>
+                    <p>Huile moteur légère à économie de carburant dans la classe SAE 5W-30</p>
+                    <a href="#" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Premium High 0540 PRO -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/premium-high-0540-pro">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Premium-High-0540-PRO.webp" alt="BASINOL Premium High 0540 PRO" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Premium High 0540 PRO</h3>
+                    <p>Huile moteur économe en carburant de grade SAE 5W-40</p>
+                    <a href="#" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Premium 0540 C3 -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/premium-0540-c3">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Premium-0540-C3-1.webp" alt="BASINOL Premium 0540 C3" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Premium 0540 C3</h3>
+                    <p>Huile moteur synthétique à faible viscosité pour moteurs essence et diesel avec post-traitement</p>
+                    <a href="#" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Power High 0540 -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/power-high-0540">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Power-High-0540.webp" alt="BASINOL Power High 0540" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Power High 0540</h3>
+                    <p>Huile moteur polyvalente pour moteurs essence et diesel modernes avec turbocompresseurs</p>
+                    <a href="#" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Evolution Sport 0550 -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/evolution-sport-0550">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Evolution-Sport-0550.webp" alt="BASINOL Evolution Sport 0550" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Evolution Sport 0550</h3>
+                    <p>Huile moteur économe en carburant de grade SAE 5W-50</p>
+                    <a href="#" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Evolution Sport 1060 -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/evolution-sport-1060">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Evolution-Sport-1060.webp" alt="BASINOL Evolution Sport 1060" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Evolution Sport 1060</h3>
+                    <p>Huile moteur synthétique à faible friction pour moteurs essence et diesel et camionnettes</p>
+                    <a href="#" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Power Syn 1030 -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/power-syn-1030">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Power-Syn-1030.webp" alt="BASINOL Power Syn 1030" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Power Syn 1030</h3>
+                    <p>Huile moteur multigrade fabriquée à partir d'huiles de base raffinées de haute qualité</p>
+                    <a href="#" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Power Syn 1040 Plus -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/power-syn-1040-plus">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Power-Syn-1040-PLUS.webp" alt="BASINOL Power Syn 1040 Plus" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Power Syn 1040 Plus</h3>
+                    <p>Huile moteur moderne et polyvalente basée sur des huiles de base HC de haute qualité</p>
+                    <a href="#" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+                
+                <!-- BASINOL Power Syn 1040 -->
+                <div class="product-bottle-item">
+                    <div class="product-bottle-image">
+                        <a href="/produits/huiles-moteur/voitures-et-camionnettes/power-syn-1040">
+                            <img src="/optimized-images/products/cars-vans/Basinol-Power-Syn-1040.webp" alt="BASINOL Power Syn 1040" loading="lazy">
+                        </a>
+                    </div>
+                    <h3 class="product-bottle-title">BASINOL<sup>®</sup> Power Syn 1040</h3>
+                    <p>Huile moteur multigrade de grade SAE 10W-40</p>
+                    <a href="#" class="product-bottle-link">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                        Détails du produit
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Questions fréquemment posées</h2>
+            <div class="faq-container">
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Quels sont les avantages des huiles moteur BASINOL pour voitures et camionnettes ?</h3>
+                        <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Les huiles moteur BASINOL sont spécialement conçues pour répondre aux exigences des véhicules modernes et offrent de nombreux avantages :</p>
+                        <ul>
+                            <li>Protection optimale contre l'usure : nos huiles réduisent les frottements et protègent les composants du moteur contre l'usure prématurée, même dans des conditions extrêmes.</li>
+                            <li>Amélioration des performances du moteur : des additifs de haute qualité assurent une combustion propre et une viscosité stable sur de longues durées de fonctionnement.</li>
+                            <li>Efficacité énergétique accrue : en réduisant les pertes par frottement, les huiles moteur BASINOL contribuent à réduire la consommation de carburant et les émissions de CO₂.</li>
+                            <li>Intervalles de vidange prolongés : grâce à une résistance élevée à l'oxydation, nos huiles permettent des intervalles de vidange plus longs, ce qui réduit les coûts d'entretien.</li>
+                            <li>Adaptées aux véhicules modernes et plus anciens : nos huiles moteur répondent aux dernières spécifications des constructeurs et offrent une protection pour une large gamme de moteurs essence, diesel et hybrides.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Puis-je utiliser la même huile moteur pour les moteurs essence, diesel et hybrides ?</h3>
+                        <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Certaines huiles moteur BASINOL sont formulées pour être utilisées dans différents types de moteurs, y compris les moteurs essence, diesel et hybrides. Cependant, il est important de vérifier les spécifications et les homologations de l'huile pour s'assurer qu'elle convient à votre type de moteur spécifique.</p>
+                        <p>Les moteurs modernes ont des exigences particulières, notamment en ce qui concerne les systèmes de post-traitement des gaz d'échappement et les technologies de réduction des émissions. C'est pourquoi nous proposons des huiles spécifiquement formulées pour répondre à ces exigences, comme nos huiles à faible teneur en cendres sulfatées, phosphore et soufre (Low SAPS) pour les véhicules équipés de filtres à particules.</p>
+                        <p>Consultez toujours le manuel du propriétaire de votre véhicule ou contactez-nous pour obtenir des recommandations personnalisées sur l'huile moteur la plus adaptée à votre véhicule.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>À quelle fréquence faut-il changer l'huile moteur de ma camionnette ?</h3>
+                        <span class="faq-toggle"></span>
+                    </div>
+                    <div class="faq-answer">
+                        <p>La fréquence de vidange d'huile pour une camionnette dépend de plusieurs facteurs, notamment le type de véhicule, l'âge du moteur, les conditions de conduite et le type d'huile utilisé.</p>
+                        <p>Pour les camionnettes modernes utilisant des huiles synthétiques de haute qualité comme celles de BASINOL, les intervalles de vidange peuvent généralement aller de 10 000 à 15 000 kilomètres, ou une fois par an, selon la première éventualité. Cependant, si vous utilisez votre camionnette dans des conditions difficiles (trajets courts fréquents, conduite en montagne, remorquage régulier, environnements poussiéreux), il est recommandé de réduire cet intervalle.</p>
+                        <p>Il est toujours préférable de suivre les recommandations du constructeur indiquées dans le manuel du propriétaire. Certains véhicules modernes sont équipés de systèmes de surveillance de la qualité de l'huile qui vous indiquent quand une vidange est nécessaire en fonction des conditions réelles d'utilisation.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__columns">
+                <div class="footer__column">
+                    <h4>Entreprise</h4>
+                    <ul>
+                        <li><a href="/entreprise/">À propos de nous</a></li>
+                        <li><a href="/entreprise/#assurance-qualite">Assurance qualité</a></li>
+                        <li><a href="/entreprise/#recherche-developpement">R&D</a></li>
+                        <li><a href="/entreprise/#politique-environnementale">Environnement</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h4>Produits</h4>
+                    <ul>
+                        <li><a href="/produits/huiles-moteur/">Huiles Moteur</a></li>
+                        <li><a href="/produits/huiles-transmission/">Huiles de Transmission</a></li>
+                        <li><a href="/produits/lubrifiants-industriels/">Lubrifiants Industriels</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h4>Service</h4>
+                    <ul>
+                        <li><a href="/partenaires/">Partenaires</a></li>
+                        <li><a href="/actualités/">Actualités</a></li>
+                        <li><a href="/contact/">Contact</a></li>
+                        <li><a href="/glossaire/">Glossaire</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__column">
+                    <h4>Certificats</h4>
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <picture>
+                            <source srcset="/optimized-images/icons/siegel-5.webp" type="image/webp">
+                            <img src="/optimized-images/icons/siegel-5.png" alt="BASINOL Quality" width="450" height="450" style="object-fit: contain;" loading="lazy">
+                        </picture>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer__bottom">
+                <div class="footer__social">
+                    <a href="#" aria-label="Facebook">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18 2H15C13.6739 2 12.4021 2.52678 11.4645 3.46447C10.5268 4.40215 10 5.67392 10 7V10H7V14H10V22H14V14H17L18 10H14V7C14 6.73478 14.1054 6.48043 14.2929 6.29289C14.4804 6.10536 14.7348 6 15 6H18V2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Instagram">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M17 2H7C4.23858 2 2 4.23858 2 7V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5931 15.1514 13.8416 15.5297C13.0901 15.9079 12.2384 16.0396 11.4078 15.9059C10.5771 15.7723 9.80976 15.3801 9.21484 14.7852C8.61991 14.1902 8.22773 13.4229 8.09406 12.5922C7.9604 11.7615 8.09206 10.9099 8.47032 10.1584C8.84858 9.40685 9.45418 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87658 12.63 8C13.4789 8.12588 14.2648 8.52146 14.8717 9.1283C15.4785 9.73515 15.8741 10.5211 16 11.37Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M17.5 6.5H17.51" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="YouTube">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M22.54 6.42C22.4212 5.94541 22.1793 5.51057 21.8387 5.15941C21.498 4.80824 21.0708 4.55318 20.6 4.42C18.88 4 12 4 12 4C12 4 5.12 4 3.4 4.46C2.92925 4.59318 2.50198 4.84824 2.16135 5.19941C1.82072 5.55057 1.57879 5.98541 1.46 6.46C1.14521 8.20556 0.991235 9.97631 1 11.75C0.988687 13.537 1.14266 15.3213 1.46 17.08C1.59096 17.5398 1.83831 17.9581 2.17814 18.2945C2.51798 18.6308 2.93882 18.8738 3.4 19C5.12 19.46 12 19.46 12 19.46C12 19.46 18.88 19.46 20.6 19C21.0708 18.8668 21.498 18.6118 21.8387 18.2606C22.1793 17.9094 22.4212 17.4746 22.54 17C22.8524 15.2676 23.0063 13.5103 23 11.75C23.0113 9.96295 22.8573 8.1787 22.54 6.42Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M9.75 15.02L15.5 11.75L9.75 8.48001V15.02Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M16 8C17.5913 8 19.1174 8.63214 20.2426 9.75736C21.3679 10.8826 22 12.4087 22 14V21H18V14C18 13.4696 17.7893 12.9609 17.4142 12.5858C17.0391 12.2107 16.5304 12 16 12C15.4696 12 14.9609 12.2107 14.5858 12.5858C14.2107 12.9609 14 13.4696 14 14V21H10V14C10 12.4087 10.6321 10.8826 11.7574 9.75736C12.8826 8.63214 14.4087 8 16 8Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M6 9H2V21H6V9Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M4 6C5.10457 6 6 5.10457 6 4C6 2.89543 5.10457 2 4 2C2.89543 2 2 2.89543 2 4C2 5.10457 2.89543 6 4 6Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer__links" style="margin-left: 10rem;">
+                    <a href="/politique-confidentialite/">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Notice -->
+    <div class="cookie-notice" id="cookieNotice">
+        <div class="cookie-notice__content">
+            <p>Ce site utilise des cookies pour fournir nos services. Pour plus d'informations, veuillez consulter notre <a href="/politique-confidentialite/">politique de confidentialité</a>.</p>
+            <button class="btn btn-primary" id="acceptCookies">Fermer</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/js/cookie-manager.js"></script>
+    <script src="/js/analytics.js"></script>
+    <script src="/js/main.js"></script>
+    <script src="/js/language.js"></script>
+    <script src="/js/faq.js"></script>
+
+</body>
+</html>
