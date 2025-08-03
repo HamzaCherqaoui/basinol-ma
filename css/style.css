@@ -525,6 +525,60 @@ section {
     font-weight: var(--font-weight-medium);
 }
 
+/* ===== Product Breadcrumb ===== */
+.product-breadcrumb {
+    background-color: transparent;
+    padding: var(--spacing-sm) 0;
+    border-bottom: none;
+    margin-bottom: 0;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    top: 80px;
+}
+
+.product-breadcrumb ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end;
+    padding-right: var(--spacing-lg);
+}
+
+.product-breadcrumb li {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    color: var(--subtle-gray);
+    letter-spacing: 0.02em;
+    padding: var(--spacing-xs) 0;
+}
+
+.product-breadcrumb li:not(:last-child)::after {
+    content: '›';
+    margin: 0 var(--spacing-xs);
+    color: var(--medium-gray);
+}
+
+.product-breadcrumb a {
+    color: var(--subtle-gray);
+    transition: color var(--transition-fast);
+    opacity: 0.8;
+}
+
+.product-breadcrumb a:hover {
+    color: var(--primary-color);
+    /* Primary color on hover */
+    opacity: 1;
+}
+
+.product-breadcrumb li:last-child {
+    color: var(--primary-color);
+    /* Highlight active item */
+    font-weight: var(--font-weight-medium);
+}
+
 /* ===== Hero Section ===== */
 .hero {
     position: relative;
@@ -3088,6 +3142,7 @@ section {
     gap: 2rem;
     margin: 3rem auto;
     max-width: 1200px;
+    margin-top: 0rem;
 }
 
 .product-bottle-item {
