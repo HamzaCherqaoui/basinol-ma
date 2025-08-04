@@ -272,8 +272,8 @@
                     <ul>
                         <li><a href="/entreprise/">À propos de nous</a></li>
                         <li><a href="/entreprise/#assurance-qualite">Assurance qualité</a></li>
-                        <li><a href="/entreprise/#recherche-developpement">Recherche & Développement</a></li>
-                        <li><a href="/entreprise/#politique-environnementale">Politique environnementale</a></li>
+                        <li><a href="/entreprise/#recherche-developpement">R&D</a></li>
+                        <li><a href="/entreprise/#politique-environnementale">Environnement</a></li>
                     </ul>
                 </div>
                 
@@ -298,9 +298,11 @@
                 
                 <div class="footer__column">
                     <h4>Certificats</h4>
-                    <div class="certificates">
-                        <img src="/images/icons/BASINOL_Quality_Button.png" alt="BASINOL Quality" width="80" height="80">
-                        <img src="/images/icons/siegel-made-in-germany.png" alt="Made in Germany" width="80" height="80">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <picture>
+                            <source srcset="/optimized-images/icons/siegel-5.webp" type="image/webp">
+                            <img src="/optimized-images/icons/siegel-5.png" alt="BASINOL Quality" width="450" height="450" style="object-fit: contain;" loading="lazy">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -352,7 +354,9 @@
     <script src="/js/cookie-manager.js"></script>
     <script src="/js/analytics.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/slider.js"></script>
     <script src="/js/language.js"></script>
-    <script src="/js/partners-map.js"></script>
+    <script src="/js/lazy-loading.js"></script>
+     <script src="/js/faq.js"></script>
 </body>
 </html>

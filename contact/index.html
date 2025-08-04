@@ -96,10 +96,10 @@
     </div>
 
     <!-- Contact Hero -->
-    <section class="page-hero">
+    <section class="page-hero minimal-hero">
         <div class="container">
             <h1>Contactez-nous</h1>
-            <p>Vous avez des questions sur nos produits ou services? Vous souhaitez devenir partenaire de distribution? Notre équipe est à votre disposition pour vous aider. N'hésitez pas à nous contacter en utilisant le formulaire ci-dessous ou en nous appelant directement.</p>
+            <p style="color: #f9f9f9;">Vous avez des questions sur nos produits ou services? Vous souhaitez devenir partenaire de distribution? Notre équipe est à votre disposition pour vous aider. N'hésitez pas à nous contacter en utilisant le formulaire ci-dessous ou en nous appelant directement.</p>
         </div>
     </section>
 
@@ -108,8 +108,8 @@
         <div class="container">
             <div class="contact-grid">
                 <!-- Contact Form -->
-                <div class="contact-form-container">
-                    <h2>Envoyez-nous un message</h2>
+                <div class="contact-form-container" style="padding: 2rem; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h2 style="margin-top: 0; margin-bottom: 1.5rem; color: #006C32;">Envoyez-nous un message</h2>
                     <form class="contact-form" id="contactForm">
                         <div class="form-group">
                             <label for="name">Nom complet *</label>
@@ -154,8 +154,8 @@
                             </div>
                         </div>
                         
-                        <div class="form-submit">
-                            <button type="submit" class="btn btn-primary">Envoyer le message</button>
+                        <div class="form-submit" style="margin-top: 1.5rem; text-align: center;">
+                            <button type="submit" class="btn btn-primary" style="padding: 0.75rem 2rem; font-weight: 600;">Envoyer le message</button>
                         </div>
                     </form>
                 </div>
@@ -166,42 +166,53 @@
                         <h3>Coordonnées</h3>
                         <div class="info-item">
                             <div class="info-icon">
-                                <img src="/images/icons/location.svg" alt="Adresse">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                    <circle cx="12" cy="10" r="3"></circle>
+                                </svg>
                             </div>
                             <div class="info-text">
                                 <h4>Adresse</h4>
                                 <address>
                                     BASINOL <br>
-                                    Industriestraße 45<br>
-                                    10115 Berlin<br>
-                                    Allemagne
+                                    Ain Atig, Numéro 2 Route National 1<br>
+                                    Ain Atig à côté du groupe scolaire Marassil<br>
+                                    Témara 12040, Morocco
                                 </address>
                             </div>
                         </div>
                         
                         <div class="info-item">
                             <div class="info-icon">
-                                <img src="/images/icons/phone.svg" alt="Téléphone">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                                </svg>
                             </div>
                             <div class="info-text">
                                 <h4>Téléphone</h4>
-                                <p>+49 30 1234567</p>
+                                <p>+212 631 829 949</p>
                             </div>
                         </div>
                         
                         <div class="info-item">
                             <div class="info-icon">
-                                <img src="/images/icons/email.svg" alt="Email">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                    <polyline points="22,6 12,13 2,6"></polyline>
+                                </svg>
                             </div>
                             <div class="info-text">
                                 <h4>Email</h4>
-                                <p><a href="mailto:contact@basinol.com">contact@basinol.com</a></p>
+                                <p><a href="mailto:contact@basinol.ma">contact@basinol.ma</a></p>
                             </div>
                         </div>
                         
                         <div class="info-item">
                             <div class="info-icon">
-                                <img src="/images/icons/clock.svg" alt="Heures d'ouverture">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
                             </div>
                             <div class="info-text">
                                 <h4>Heures d'ouverture</h4>
@@ -210,94 +221,21 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="info-card">
-                        <h3>Service client</h3>
-                        <p>Notre équipe de service client est disponible pour répondre à toutes vos questions concernant nos produits et services.</p>
-                        <p><strong>Téléphone:</strong> +49 30 1234567-99</p>
-                        <p><strong>Email:</strong> <a href="mailto:support@basinol.com">support@basinol.com</a></p>
-                    </div>
-                    
-                    <div class="social-links">
-                        <h3>Suivez-nous</h3>
-                        <div class="social-icons">
-                            <a href="#" aria-label="Facebook" class="social-icon">
-                                <img src="/images/icons/facebook.svg" alt="Facebook">
-                            </a>
-                            <a href="#" aria-label="Instagram" class="social-icon">
-                                <img src="/images/icons/instagram.svg" alt="Instagram">
-                            </a>
-                            <a href="#" aria-label="YouTube" class="social-icon">
-                                <img src="/images/icons/youtube.svg" alt="YouTube">
-                            </a>
-                            <a href="#" aria-label="LinkedIn" class="social-icon">
-                                <img src="/images/icons/linkedin.svg" alt="LinkedIn">
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Map Section -->
-    <section class="map-section">
+    <section class="map-section" style="background-color: #f9f9f9;">
         <div class="container">
             <h2>Notre emplacement</h2>
             <div class="map-container">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2427.6854224284097!2d13.383906376926151!3d52.53080287436787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851e52cccb2a1%3A0x6f8bdd46eb8c81!2sIndustriestraße%2C%2010115%20Berlin%2C%20Allemagne!5e0!3m2!1sfr!2sfr!4v1687900456789!5m2!1sfr!2sfr" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3311.807901264976!2d-6.9573382!3d33.89460089999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda70d40dfcc2bed%3A0x75d6ea7446013258!2sBASINOL%C2%AE%20-%20MAROC!5e0!3m2!1sen!2sus!4v1754263776068!5m2!1sen!2sus" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
         </div>
     </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <h2>Questions fréquemment posées</h2>
-            <div class="faq-container">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Comment puis-je trouver le produit BASINOL adapté à mon véhicule?</h3>
-                        <span class="faq-toggle"></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Vous pouvez utiliser notre outil de recherche de produits sur notre site web en entrant les spécifications de votre véhicule. Vous pouvez également consulter le manuel de votre véhicule pour connaître les spécifications requises ou contacter notre service client pour obtenir des conseils personnalisés.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Où puis-je acheter des produits BASINOL?</h3>
-                        <span class="faq-toggle"></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Les produits BASINOL sont disponibles auprès de notre réseau de partenaires de distribution. Consultez notre page <a href="/partenaires/">Partenaires</a> pour trouver le distributeur le plus proche de chez vous.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Comment puis-je devenir un partenaire de distribution BASINOL?</h3>
-                        <span class="faq-toggle"></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Si vous êtes intéressé à devenir un partenaire de distribution BASINOL, veuillez remplir notre formulaire de contact en sélectionnant "Partenariat commercial" comme sujet. Notre équipe commerciale vous contactera pour discuter des opportunités de partenariat.</p>
-                    </div>
-                </div>
-                
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>Quelles sont les certifications des produits BASINOL?</h3>
-                        <span class="faq-toggle"></span>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Les produits BASINOL sont certifiés selon les normes internationales les plus strictes et sont approuvés par de nombreux constructeurs automobiles (OEM). Vous pouvez trouver des informations détaillées sur les certifications spécifiques de chaque produit sur sa fiche technique.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -307,8 +245,8 @@
                     <ul>
                         <li><a href="/entreprise/">À propos de nous</a></li>
                         <li><a href="/entreprise/#assurance-qualite">Assurance qualité</a></li>
-                        <li><a href="/entreprise/#recherche-developpement">Recherche & Développement</a></li>
-                        <li><a href="/entreprise/#politique-environnementale">Politique environnementale</a></li>
+                        <li><a href="/entreprise/#recherche-developpement">R&D</a></li>
+                        <li><a href="/entreprise/#politique-environnementale">Environnement</a></li>
                     </ul>
                 </div>
                 
@@ -333,9 +271,11 @@
                 
                 <div class="footer__column">
                     <h4>Certificats</h4>
-                    <div class="certificates">
-                        <img src="/images/icons/BASINOL_Quality_Button.png" alt="BASINOL Quality" width="80" height="80">
-                        <img src="/images/icons/siegel-made-in-germany.png" alt="Made in Germany" width="80" height="80">
+                    <div style="display: flex; justify-content: center; align-items: center;">
+                        <picture>
+                            <source srcset="/optimized-images/icons/siegel-5.webp" type="image/webp">
+                            <img src="/optimized-images/icons/siegel-5.png" alt="BASINOL Quality" width="450" height="450" style="object-fit: contain;" loading="lazy">
+                        </picture>
                     </div>
                 </div>
             </div>
@@ -387,8 +327,9 @@
     <script src="/js/cookie-manager.js"></script>
     <script src="/js/analytics.js"></script>
     <script src="/js/main.js"></script>
+    <script src="/js/slider.js"></script>
     <script src="/js/language.js"></script>
-    <script src="/js/contact-form.js"></script>
-    <script src="/js/faq.js"></script>
+    <script src="/js/lazy-loading.js"></script>
+     <script src="/js/faq.js"></script>
 </body>
 </html>
