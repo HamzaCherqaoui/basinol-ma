@@ -21,12 +21,48 @@ function initContactForm() {
 
         // Validate form
         if (validateForm(this)) {
-            // In a real implementation, this would submit the form data to a server
-            // For this demo, we'll just show a success message
-            showFormMessage('success', 'Votre message a été envoyé avec succès. Nous vous contacterons bientôt.');
+            // Show loading state
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalButtonText = submitButton.textContent;
+            submitButton.textContent = 'Envoi en cours...';
+            submitButton.disabled = true;
 
-            // Reset form
-            this.reset();
+            // Get form data
+            const formData = new FormData(this);
+
+            // Send form data to Formspree via fetch API
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    throw new Error('Erreur réseau lors de l\'envoi du formulaire.');
+                })
+                .then(data => {
+                    // Show success message
+                    showFormMessage('success', 'Votre message a été envoyé avec succès. Nous vous contacterons bientôt.');
+
+                    // Reset form
+                    contactForm.reset();
+
+                    // Reset button
+                    submitButton.textContent = originalButtonText;
+                    submitButton.disabled = false;
+                })
+                .catch(error => {
+                    console.error('Erreur lors de l\'envoi du formulaire:', error);
+                    showFormMessage('error', 'Une erreur s\'est produite lors de l\'envoi de votre message. Veuillez réessayer plus tard ou nous contacter directement par téléphone.');
+
+                    // Reset button
+                    submitButton.textContent = originalButtonText;
+                    submitButton.disabled = false;
+                });
         }
     });
 
@@ -161,6 +197,7 @@ function clearInputError(input) {
         parent.removeChild(errorElement);
     }
 }
+
 
 /**
  * Show a form message (success or error)

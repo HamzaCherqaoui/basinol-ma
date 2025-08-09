@@ -108,33 +108,30 @@
         <div class="container">
             <div class="contact-grid">
                 <!-- Contact Form -->
-                <div class="contact-form-container" style="padding: 2rem; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
-                    <h2 style="margin-top: 0; margin-bottom: 1.5rem; color: #006C32;">Envoyez-nous un message</h2>
-                    <form class="contact-form" id="contactForm">
+                <div class="contact-form-container" style="padding: 2.5rem; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.05);">
+                    <h2 style="margin-top: 0rem; margin-bottom: 1.5rem; color: #006C32;">Envoyez-nous un message</h2>
+                    <form class="contact-form" id="contactForm" action="https://formspree.io/f/xqalwqed" method="POST">
+                        <!-- Hidden field to prevent redirect -->
+                        <input type="hidden" name="_next" value="#" />
                         <div class="form-group">
-                            <label for="name">Nom complet *</label>
-                            <input type="text" id="name" name="name" required>
+                            <input type="text" id="name" name="name" placeholder="Nom complet *" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="email">Adresse email *</label>
-                            <input type="email" id="email" name="email" required>
+                            <input type="email" id="email" name="email" placeholder="Adresse email *" required>
                         </div>
                         
                         <div class="form-group">
-                            <label for="phone">Téléphone</label>
-                            <input type="tel" id="phone" name="phone">
+                            <input type="tel" id="phone" name="phone" placeholder="Téléphone">
                         </div>
                         
                         <div class="form-group">
-                            <label for="company">Entreprise</label>
-                            <input type="text" id="company" name="company">
+                            <input type="text" id="company" name="company" placeholder="Entreprise">
                         </div>
                         
                         <div class="form-group">
-                            <label for="subject">Sujet *</label>
                             <select id="subject" name="subject" required>
-                                <option value="">Sélectionnez un sujet</option>
+                                <option value="">Sujet *</option>
                                 <option value="product">Question sur un produit</option>
                                 <option value="technical">Support technique</option>
                                 <option value="partnership">Partenariat commercial</option>
@@ -143,14 +140,13 @@
                         </div>
                         
                         <div class="form-group full-width">
-                            <label for="message">Message *</label>
-                            <textarea id="message" name="message" rows="6" required></textarea>
+                            <textarea id="message" name="message" rows="6" placeholder="Message *" required></textarea>
                         </div>
                         
-                        <div class="form-group full-width">
-                            <div class="form-consent">
+                        <div class="form-group full-width" style="margin-bottom: 0.5rem;">
+                            <div class="form-consent-2">
                                 <input type="checkbox" id="privacy" name="privacy" required>
-                                <label for="privacy">J'accepte que mes données soient traitées conformément à la <a href="/politique-confidentialite/">politique de confidentialité</a> de BASINOL. *</label>
+                                <label for="privacy">J'accepte que mes données soient traitées conformément à la <a href="/politique-confidentialite/" style="color: var(--primary-color);">politique de confidentialité</a> de BASINOL. *</label>
                             </div>
                         </div>
                         
@@ -324,12 +320,13 @@
     </div>
 
     <!-- Scripts -->
+    <script src="/js/contact-form.js"></script>
     <script src="/js/cookie-manager.js"></script>
     <script src="/js/analytics.js"></script>
     <script src="/js/main.js"></script>
     <script src="/js/slider.js"></script>
     <script src="/js/language.js"></script>
     <script src="/js/lazy-loading.js"></script>
-     <script src="/js/faq.js"></script>
+    <script src="/js/faq.js"></script>
 </body>
 </html>

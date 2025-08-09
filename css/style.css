@@ -1974,21 +1974,32 @@ section {
 .form-consent {
     display: flex;
     align-items: flex-start;
-    text-align: left;
+    /* keeps checkbox aligned to first line of label */
+    gap: 0.5rem;
+    /* space between checkbox and text */
 }
 
 .form-consent input {
-    margin-top: 5px;
-    margin-right: var(--spacing-sm);
+    flex-shrink: 0;
+    /* prevents checkbox from shrinking */
+    margin-top: 2px;
+    /* fine-tune vertical alignment */
 }
 
 .form-consent label {
     font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+    /* remove unnecessary margins */
+    color: var(--text-color);
+    /* use your site’s text color variable */
 }
 
 .form-consent a {
-    color: var(--white);
+    color: var(--primary-color);
+    /* match theme */
     text-decoration: underline;
+    font-weight: 500;
 }
 
 /* ===== Contact Form ===== */
@@ -2096,6 +2107,41 @@ section {
     width: 20px;
     height: 20px;
     filter: brightness(0) invert(1);
+}
+
+.form-group.full-width .form-consent-2 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    /* align checkbox to first line */
+    justify-content: flex-start;
+    /* ensure left alignment in grid */
+    gap: 0.5rem;
+    /* space between checkbox and label */
+    width: 100%;
+    /* fill available space */
+}
+
+.form-consent-2 input[type="checkbox"] {
+    flex-shrink: 0;
+    /* checkbox stays fixed size */
+    margin-top: 2px;
+    /* vertical alignment tweak */
+    width: 18px;
+    height: 18px;
+}
+
+.form-consent-2 label {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin: 0;
+    color: var(--text-color, #222);
+}
+
+.form-consent-2 a {
+    color: var(--primary-color, #006C32);
+    text-decoration: underline;
+    font-weight: 500;
 }
 
 /* ===== Map Section ===== */
@@ -3443,7 +3489,7 @@ section {
 }
 
 .form-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: -0.1rem;
 }
 
 .form-group.full-width {
