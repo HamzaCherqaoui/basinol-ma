@@ -11,6 +11,10 @@
         display: none !important;
     }
 
+    .product-breadcrumb {
+        display: none !important;
+    }
+
     .hero--elegant-container {
         display: none !important;
     }
@@ -844,17 +848,13 @@
 }
 
 /* ==== Product Section ==== */
-
 @media (max-width: 600px) {
-
-    /* Make the product card stack vertically */
-    .product-categories>.container>div>div {
+    .main-page .product-categories>.container>div>div {
         display: flex !important;
         flex-direction: column !important;
     }
 
-    /* Image container: full width, fixed height, no padding/margin */
-    .product-categories>.container>div>div>div:first-child {
+    .main-page .product-categories>.container>div>div>div:first-child {
         position: relative !important;
         width: 100% !important;
         height: 200px !important;
@@ -864,18 +864,15 @@
         margin: 0 !important;
     }
 
-    /* Picture tag to fill container */
-    .product-categories>.container>div>div>div:first-child picture {
+    .main-page .product-categories>.container>div>div>div:first-child picture {
         display: block !important;
         width: 100% !important;
         height: 100% !important;
         margin: 0 !important;
     }
 
-    /* Image: fill container and override inline styles */
-    .product-categories>.container>div>div>div:first-child picture img {
+    .main-page .product-categories>.container>div>div>div:first-child picture img {
         position: relative !important;
-        /* override absolute */
         width: 100% !important;
         height: 100% !important;
         object-fit: cover !important;
@@ -885,32 +882,29 @@
         border-radius: inherit !important;
     }
 
-    /* Content padding adjustment */
-    .product-categories>.container>div>div>div:last-child {
+    .main-page .product-categories>.container>div>div>div:last-child {
         padding: 2rem 1.5rem !important;
     }
 
-    .product-categories p {
+    .main-page .product-categories p {
         font-size: 1rem;
-        /* smaller paragraph text */
         line-height: 1.4;
         color: #424245;
     }
 
-    .section-title {
+    .main-page .section-title {
         font-size: 2rem !important;
     }
 
-    .product-categories h3 {
+    .main-page .product-categories h3 {
         font-size: 1.4rem !important;
     }
-
 }
 
 /* ===== Produits Section Responsive Adjustments ===== */
 @media (max-width: 600px) {
     .product-hero {
-        padding: 1rem 1.5rem 2rem;
+        padding: 1.8rem 0rem 3rem !important;
         background-color: #f5f5f7;
         position: relative;
         color: white;
@@ -918,7 +912,6 @@
         max-width: 900px;
         margin: 0 auto;
         max-height: 585px;
-        margin-top: -3.5rem;
     }
 
     .product-hero-overlay {
@@ -934,7 +927,7 @@
     }
 
     .product-hero__title {
-        font-size: 2rem;
+        font-size: 2rem !important;
         font-weight: 600;
         margin-bottom: 1rem;
         line-height: 1.2;
@@ -965,7 +958,7 @@
         /* better for multi-line text */
         gap: 0.75rem;
         /* spacing between icon and text */
-        font-size: 0.9rem;
+        font-size: 0.9rem !important;
         line-height: 1.4;
         color: white;
         width: 100%;
@@ -983,6 +976,61 @@
         background-color: white;
         margin-top: 0.3rem;
         /* align vertically with multiline text */
+    }
+
+    .product-bottle-image {
+        margin-bottom: -2rem;
+        /* smaller gap below image */
+    }
+
+    .product-bottle-title {
+        margin-top: 0.25rem;
+        /* less space above title */
+        margin-bottom: 1rem;
+        /* less space below title */
+    }
+
+    .product-bottle-item p {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .product-layout {
+        flex-direction: column !important;
+        /* stack vertically */
+        gap: 1.5rem !important;
+        /* reduce gap for mobile */
+        margin-top: -1.5rem !important;
+    }
+
+    .product-image {
+        flex: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .product-image img {
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        object-fit: contain;
+    }
+
+    .product-content {
+        flex: none !important;
+        width: 100% !important;
+        padding: 0 1rem !important;
+    }
+
+    .product-content h1,
+    .product-content h3,
+    .product-content p {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+
+    .product-content hr {
+        margin: 1.5rem 0 !important;
     }
 }
 
