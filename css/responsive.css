@@ -6,6 +6,16 @@
 /* Note: Most responsive styles are included directly in style.css using media queries.
    This file contains additional responsive adjustments and overrides. */
 
+@media (max-width: 600px) {
+    .breadcrumb {
+        display: none !important;
+    }
+
+    .hero--elegant-container {
+        display: none !important;
+    }
+}
+
 /* ===== Mobile Navigation ===== */
 @media (max-width: 768px) {
 
@@ -54,46 +64,80 @@
     }
 
     /* Mobile sidebar navigation */
+    /* Sidebar container */
     .nav__list {
         position: fixed;
         top: 0;
-        right: -50%;
-        /* Start off-screen to the right */
-        width: 50%;
-        /* Half width of the screen */
-        height: 100%;
-        /* Full height */
-        min-height: 100vh;
-        /* Ensure minimum height is full viewport */
+        right: -100%;
+        width: 75%;
+        max-width: 320px;
+        height: 100vh;
         z-index: 1001;
-        /* Higher z-index */
         background-color: var(--primary-color);
-        padding: 0.5rem 0 0 0;
-        padding-top: 0;
-        /* Reduced top padding to move items higher */
+        padding-top: 5.5rem;
+        /* space for logo and close button */
         margin: 0;
         overflow-y: auto;
         display: flex;
         flex-direction: column;
+        justify-content: flex-start;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
         transition: right 0.3s ease;
-        position: fixed;
-        /* Ensure it stays fixed when scrolling */
     }
 
     .nav__list.show {
         right: 0;
     }
 
-    .nav__item {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        transition: background-color var(--transition-fast);
-        width: 100%;
+    /* Header row inside sidebar for logo and close button */
+    .sidebar-header {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 75%;
+        max-width: 320px;
+        height: 5rem;
+        background-color: var(--primary-color);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1.5rem;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+        z-index: 1102;
     }
 
-    .nav__item:first-child {
-        margin-top: 0;
-        padding-top: 0;
+    /* Basinol favicon logo */
+    .sidebar-header .logo {
+        display: flex;
+        align-items: center;
+    }
+
+    .sidebar-header .logo img {
+        height: 30px;
+        width: auto;
+    }
+
+    /* Close button */
+    .sidebar-close-btn {
+        cursor: pointer;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 1.8rem;
+        font-weight: bold;
+        line-height: 1;
+        padding: 0;
+        user-select: none;
+    }
+
+    /* Nav items */
+    .nav__item {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin: 0 1.5rem;
+        /* shorten horizontal length of border */
+        transition: background-color var(--transition-fast);
+        width: calc(100% - 3rem);
+        /* account for horizontal margin */
     }
 
     .nav__item:last-child {
@@ -106,50 +150,58 @@
 
     .nav__link {
         padding: 1rem 1.5rem;
-        /* Explicit padding values */
+        position: relative;
         transition: color var(--transition-fast), transform var(--transition-fast);
         display: block;
         width: 100%;
         color: var(--white);
         font-size: 1.1rem;
-        /* Slightly larger font size */
+        text-decoration: none;
     }
 
+    /* Remove any existing active bar styles */
+
+    /* Add active bar as left border aligned with text */
+    .nav__link.active {
+        font-weight: 600;
+        color: var(--white);
+        border-left: 4px solid var(--white);
+        padding-left: calc(1.5rem - 4px);
+        /* subtract border width so text doesn't shift */
+    }
+
+    /* Optional: on hover, keep text color white */
     .nav__link:hover {
         transform: translateX(5px);
         color: var(--white);
     }
 
-    .nav__link.active {
-        color: var(--white);
-    }
-
-    .nav__link.active::after {
-        background-color: var(--white);
-    }
-
-    /* Mobile menu toggle button */
     .mobile-menu-toggle {
         display: block;
         margin-left: 0.5rem;
-        z-index: 1001;
+        z-index: 1100;
         position: relative;
+        cursor: pointer;
     }
 
-    /* Dropdown menu in mobile sidebar */
+    /* Dropdown menu */
     .dropdown {
         position: static;
         width: 100%;
         transform: none;
         box-shadow: none;
-        padding: 0;
+        padding: 0 1.5rem;
         background-color: rgba(255, 255, 255, 0.1);
         display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease, opacity 0.3s ease;
     }
 
     .nav__item.has-dropdown.active .dropdown {
         display: block;
         opacity: 1;
+        max-height: 500px;
         visibility: visible;
     }
 
@@ -160,7 +212,6 @@
 
     .dropdown-section {
         margin-bottom: 0.5rem;
-        padding: 0 var(--spacing-lg);
     }
 
     .dropdown-title {
@@ -173,10 +224,48 @@
     .dropdown-link {
         padding: 0.5rem 0;
         color: rgba(255, 255, 255, 0.8);
+        text-decoration: none;
     }
 
     .dropdown-link:hover {
         color: var(--white);
+    }
+
+    .nav__item.has-dropdown {
+        position: relative;
+        /* to position arrow absolutely inside */
+    }
+
+    .nav__item.has-dropdown>.nav__link {
+        position: relative;
+        padding-right: 2rem;
+        /* space for the arrow on the right */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        /* text left, arrow right */
+    }
+
+    /* Apple-like arrow: simple chevron */
+    .nav__item.has-dropdown>.nav__link::after {
+        content: '›';
+        /* simple right chevron */
+        position: absolute;
+        right: 1rem;
+        /* distance from right edge */
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
+        font-size: 1.2rem;
+        color: rgba(255, 255, 255, 0.6);
+        transition: transform 0.3s ease, color 0.3s ease;
+        pointer-events: none;
+        /* so click goes to the link */
+    }
+
+    /* Rotate arrow down when active */
+    .nav__item.has-dropdown.active>.nav__link::after {
+        transform: translateY(-50%) rotate(90deg);
+        color: rgba(255, 255, 255, 0.9);
     }
 
     /* Product categories responsive adjustments for horizontal layout */
@@ -390,70 +479,6 @@
     }
 }
 
-/* ==== Product Section ==== */
-
-@media (max-width: 600px) {
-
-    /* Make the product card stack vertically */
-    .product-categories>.container>div>div {
-        display: flex !important;
-        flex-direction: column !important;
-    }
-
-    /* Image container: full width, fixed height, no padding/margin */
-    .product-categories>.container>div>div>div:first-child {
-        position: relative !important;
-        width: 100% !important;
-        height: 200px !important;
-        overflow: hidden !important;
-        border-radius: 20px 20px 0 0 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-    }
-
-    /* Picture tag to fill container */
-    .product-categories>.container>div>div>div:first-child picture {
-        display: block !important;
-        width: 100% !important;
-        height: 100% !important;
-        margin: 0 !important;
-    }
-
-    /* Image: fill container and override inline styles */
-    .product-categories>.container>div>div>div:first-child picture img {
-        position: relative !important;
-        /* override absolute */
-        width: 100% !important;
-        height: 100% !important;
-        object-fit: cover !important;
-        top: auto !important;
-        left: auto !important;
-        margin: 0 !important;
-        border-radius: inherit !important;
-    }
-
-    /* Content padding adjustment */
-    .product-categories>.container>div>div>div:last-child {
-        padding: 2rem 1.5rem !important;
-    }
-
-    .product-categories p {
-        font-size: 1rem;
-        /* smaller paragraph text */
-        line-height: 1.4;
-        color: #424245;
-    }
-
-    .section-title {
-        font-size: 2rem !important;
-    }
-
-    .product-categories h3 {
-        font-size: 1.4rem !important;
-    }
-
-}
-
 /* ==== Quality Section ==== */
 @media (max-width: 600px) {
 
@@ -478,7 +503,7 @@
         margin-right: auto;
     }
 
-    /* Icon container: grid with 3 columns */
+    /* Grid setup: 3 columns */
     .quality-section div[style*="display: flex; justify-content: center;"] {
         display: grid !important;
         grid-template-columns: repeat(3, 90px);
@@ -489,13 +514,15 @@
         place-items: center;
     }
 
-    /* Center last two icons on second row */
+    /* Second row: last two icons centered spanning columns 2 and 3 */
     .quality-section div[style*="display: flex; justify-content: center;"] picture:nth-child(4) {
         grid-column: 2;
+        justify-self: center;
     }
 
     .quality-section div[style*="display: flex; justify-content: center;"] picture:nth-child(5) {
         grid-column: 3;
+        justify-self: center;
     }
 
     /* Fix image size and remove border radius */
@@ -634,6 +661,267 @@
         max-height: 500px;
     }
 }
+
+/* ==== Entreprise Section ==== */
+@media (max-width: 600px) {
+
+    /* Hero Section */
+    .page-hero--entreprise {
+        position: relative;
+        height: 250px !important;
+        /* Force height */
+        min-height: 250px !important;
+        overflow: hidden;
+        background: black;
+        /* Prevent green bar or background color */
+    }
+
+    /* Video container */
+    .hero__video-background {
+        position: absolute;
+        top: 0;
+        /* Align to very top */
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: black;
+    }
+
+    /* Video/iframe inside hero */
+    .hero__video-background video,
+    .hero__video-background iframe {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translate(-50%, -50%)scale(1.1);
+        object-fit: fill;
+    }
+
+    .hero__overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.3);
+    }
+
+    /* Hero text */
+    .page-hero--entreprise .container {
+        position: relative;
+        z-index: 2;
+        padding: 1rem;
+        text-align: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .page-hero--entreprise h1 {
+        font-size: 1.6rem;
+        line-height: 1.3;
+    }
+
+    /* Smaller Play Button */
+    .video-btn {
+        margin-top: 0.8rem;
+    }
+
+    .video-btn a {
+        font-size: 1rem;
+        padding: 0.4rem 0.7rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        border-radius: 6px;
+    }
+
+    .video-btn svg {
+        width: 17px;
+        height: 17px;
+    }
+
+    /* Company Sections */
+    .company-section .container {
+        padding: 0 1rem;
+    }
+
+    .company-section .section-content {
+        display: flex !important;
+        flex-direction: column;
+        gap: var(--spacing-lg);
+    }
+
+    /* On mobile, force text first then image for all sections */
+    @media (max-width: 768px) {
+        .company-section .section-content {
+            flex-direction: column !important;
+        }
+
+        .company-section .section-text {
+            order: 1;
+        }
+
+        .company-section .section-image {
+            order: 2;
+        }
+
+        /* Alternate background colors on mobile starting with white */
+        .company-section:nth-child(odd) {
+            background-color: #f5f5f7;
+        }
+
+        .company-section:nth-child(even) {
+            background-color: var(--white);
+        }
+    }
+
+    .company-section .section-text h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .company-section .section-text p,
+    .company-section .section-text ul {
+        font-size: 0.95rem;
+        line-height: 1.4;
+    }
+
+    .company-section .section-text ul {
+        padding-left: 1.2rem;
+    }
+
+    .company-section .section-image picture img {
+        width: 100%;
+        height: auto;
+        border-radius: 12px;
+    }
+
+    /* Hero Elegant Section */
+    .hero--elegant-container .hero__slide {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .hero--elegant-container .hero__image picture img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .hero--elegant-container .hero__content {
+        margin-top: 1rem;
+        text-align: center;
+    }
+
+    .hero--elegant-container h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .hero--elegant-container .hero__subtitle {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn.btn-entreprise {
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .hero__controls {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+}
+
+/* ===== Produits Section Responsive Adjustments ===== */
+@media (max-width: 600px) {
+    .product-hero {
+        padding: 1rem 1.5rem 2rem;
+        background-color: #f5f5f7;
+        position: relative;
+        color: white;
+        text-align: left;
+        max-width: 900px;
+        margin: 0 auto;
+        max-height: 500px;
+        margin-top: -3.5rem;
+    }
+
+    .product-hero-overlay {
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 108, 50, 0.8);
+        z-index: 1;
+    }
+
+    .product-hero__content {
+        position: relative;
+        z-index: 2;
+    }
+
+    .product-hero__title {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+        line-height: 1.2;
+    }
+
+    .product-hero__text {
+        font-size: 1rem;
+        line-height: 1.5;
+        margin-bottom: 1.5rem;
+        width: 105%;
+        /* Take full width of container */
+        max-width: 600px;
+        /* Optional: limit width on wider screens */
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+        white-space: normal;
+    }
+
+    .product-hero__features {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .product-hero__features li {
+        display: flex;
+        align-items: flex-start;
+        /* better for multi-line text */
+        gap: 0.75rem;
+        /* spacing between icon and text */
+        font-size: 0.9rem;
+        line-height: 1.4;
+        color: white;
+        width: 100%;
+    }
+
+    .product-hero__features li span {
+        flex-shrink: 0;
+        /* keep the icon size fixed */
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background-color: white;
+        margin-top: 0.3rem;
+        /* align vertically with multiline text */
+    }
+}
+
 
 /* ===== Team Section Responsive Adjustments ===== */
 @media (max-width: 576px) {
