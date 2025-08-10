@@ -42,7 +42,7 @@
     }
 
     .header__logo img {
-        height: 24px;
+        height: 20px;
         width: auto;
         max-width: 160px;
         object-fit: contain;
@@ -207,13 +207,13 @@
     }
 
     .hero__content {
-        margin-top: 150px;
+        margin-top: 120px;
         /* Moved up to ensure buttons are visible */
         padding: var(--spacing-md);
         max-width: 90%;
         margin-left: auto;
         margin-right: auto;
-        margin-bottom: 10rem;
+        margin-bottom: 8rem;
     }
 
     .hero__slide {
@@ -223,64 +223,8 @@
         /* Add padding at top */
     }
 
-    /* Fix product section gap */
-    [style*="display: grid; grid-template-columns: 1fr 1fr; gap: 0;"] {
-        gap: 0 !important;
-    }
-
     [style*="padding: 3.5rem;"] {
         padding: 1.5rem !important;
-    }
-
-    /* No special handling for Nos Produits section images */
-    .quality-section div[style*="display: flex; justify-content: center;"] {
-        display: grid !important;
-        grid-template-columns: repeat(3, 90px);
-        /* fixed column width */
-        gap: 1rem;
-        justify-content: center;
-        /* centers the grid inside its parent */
-        margin: 0 auto 2rem;
-        max-width: fit-content;
-        /* shrink to content */
-    }
-
-    .quality-section div[style*="display: flex; justify-content: center;"] picture {
-        display: flex;
-        justify-content: center;
-    }
-
-    .quality-section div[style*="display: flex; justify-content: center;"] img {
-        width: 90px !important;
-        height: 90px !important;
-        object-fit: contain;
-    }
-
-    /* Fix FAQ toggle button */
-    .faq-question {
-        padding-right: 4rem;
-        position: relative;
-        display: flex;
-        align-items: center;
-    }
-
-    .faq-question h3 {
-        flex: 1;
-        margin: 0;
-        padding: 1rem 0;
-        font-size: 1rem;
-        line-height: 1.4;
-    }
-
-    .faq-toggle {
-        position: absolute;
-        right: 1.5rem;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 16px;
-        height: 16px;
-        flex-shrink: 0;
-        margin-left: 1rem;
     }
 
     .footer__columns {
@@ -341,31 +285,316 @@
     }
 }
 
-/* ===== Hero Section Responsive Adjustments ===== */
 @media (max-width: 576px) {
     .hero {
-        height: 450px;
-        min-height: 450px;
+        height: 285px;
+        min-height: 285px;
     }
 
     .hero__content {
-        padding: var(--spacing-md);
+        padding: var(--spacing-sm);
         max-width: 90%;
     }
 
     .hero__content h1 {
-        font-size: 2.25rem;
-        margin-bottom: var(--spacing-md);
-        line-height: 1.1;
+        font-size: 1.4rem;
+        /* smaller heading */
+        margin-bottom: var(--spacing-sm);
+        line-height: 1.2;
+    }
+
+    .hero__subtitle {
+        display: none;
     }
 
     .hero__controls {
-        bottom: var(--spacing-lg);
+        bottom: var(--spacing-md);
     }
 
     .hero__dot {
         width: 6px;
         height: 6px;
+    }
+
+    .btn.btn-primary {
+        font-size: 1rem;
+        /* smaller text */
+        padding: 0.5rem 1rem;
+        /* less padding for smaller button */
+    }
+}
+
+/* ====== Welcome Section ======= */
+@media (max-width: 576px) {
+    .welcome {
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+        text-align: left;
+        /* align everything left */
+    }
+
+    .welcome h2,
+    .welcome .subtitle,
+    .welcome__content p,
+    .welcome__features {
+        text-align: left;
+    }
+
+    .welcome .container {
+        text-align: left;
+        display: block;
+        /* reset any flex centering */
+    }
+
+    /* Stack features vertically */
+    .welcome__features {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+        margin-top: 1rem;
+        align-items: stretch;
+        /* full width */
+    }
+
+    /* Each feature: icon + text inline, vertically centered */
+    .welcome__features .feature {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 0.6rem;
+        width: 100%;
+    }
+
+    /* Icon container fixed width, center icon */
+    .welcome__features .feature__icon {
+        flex: 0 0 30px;
+        /* increase from 24px to 36px */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Uniform icon size */
+    .welcome__features .feature__icon svg,
+    .welcome__features .feature__icon img {
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
+
+    /* Text takes remaining space, left aligned */
+    .welcome__features .feature__text {
+        flex: 1 1 auto;
+        text-align: left;
+        margin: 0;
+    }
+}
+
+/* ==== Product Section ==== */
+
+@media (max-width: 600px) {
+
+    /* Make the product card stack vertically */
+    .product-categories>.container>div>div {
+        display: flex !important;
+        flex-direction: column !important;
+    }
+
+    /* Image container: full width, fixed height, no padding/margin */
+    .product-categories>.container>div>div>div:first-child {
+        position: relative !important;
+        width: 100% !important;
+        height: 200px !important;
+        overflow: hidden !important;
+        border-radius: 20px 20px 0 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Picture tag to fill container */
+    .product-categories>.container>div>div>div:first-child picture {
+        display: block !important;
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+    }
+
+    /* Image: fill container and override inline styles */
+    .product-categories>.container>div>div>div:first-child picture img {
+        position: relative !important;
+        /* override absolute */
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+        top: auto !important;
+        left: auto !important;
+        margin: 0 !important;
+        border-radius: inherit !important;
+    }
+
+    /* Content padding adjustment */
+    .product-categories>.container>div>div>div:last-child {
+        padding: 2rem 1.5rem !important;
+    }
+
+    .product-categories .section-title {
+        font-size: 2rem;
+        /* smaller heading */
+        margin-bottom: 2rem;
+    }
+
+    .product-categories p {
+        font-size: 1rem;
+        /* smaller paragraph text */
+        line-height: 1.4;
+        color: #424245;
+    }
+
+}
+
+/* ==== Quality Section ==== */
+@media (max-width: 600px) {
+
+    /* Quality Section Styles */
+    .quality-section {
+        padding: 4rem 0;
+        background-color: transparent;
+        color: var(--text-color, #000);
+        text-align: center;
+    }
+
+    .quality-section h2 {
+        font-size: 2.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .quality-section p {
+        font-size: 1.125rem;
+        margin-bottom: 2rem;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Icon container: grid with 3 columns */
+    .quality-section div[style*="display: flex; justify-content: center;"] {
+        display: grid !important;
+        grid-template-columns: repeat(3, 90px);
+        gap: 1rem 1.5rem;
+        justify-content: center;
+        margin: 0 auto 2rem;
+        max-width: fit-content;
+        place-items: center;
+    }
+
+    /* Center last two icons on second row */
+    .quality-section div[style*="display: flex; justify-content: center;"] picture:nth-child(4) {
+        grid-column: 2;
+    }
+
+    .quality-section div[style*="display: flex; justify-content: center;"] picture:nth-child(5) {
+        grid-column: 3;
+    }
+
+    /* Fix image size and remove border radius */
+    .quality-section div[style*="display: flex; justify-content: center;"] picture {
+        display: flex;
+        justify-content: center;
+    }
+
+    .quality-section div[style*="display: flex; justify-content: center;"] img {
+        width: 90px !important;
+        height: 90px !important;
+        object-fit: contain;
+        border-radius: 0 !important;
+    }
+}
+
+/* ===== FAQ Section ===== */
+@media (max-width: 600px) {
+    .faq-section {
+        padding: 4rem 1.5rem;
+        /* bigger top & bottom padding */
+        background-color: #f5f5f7;
+    }
+
+    .faq-item.active {
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .faq-question {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 1.5rem;
+        /* slightly wider padding */
+        background-color: #fff;
+        cursor: pointer;
+    }
+
+    .faq-question h3 {
+        margin: 0;
+        font-size: 1rem;
+        /* smaller header text */
+        line-height: 1.5;
+        flex: 1;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+        /* or any smaller size you want */
+        font-weight: 600;
+        /* optional: adjust weight */
+        margin-bottom: 1rem;
+        /* optional spacing below */
+    }
+
+    .faq-toggle {
+        position: relative;
+        width: 20px;
+        height: 20px;
+        flex-shrink: 0;
+    }
+
+    .faq-toggle::before,
+    .faq-toggle::after {
+        content: '';
+        position: absolute;
+        background-color: var(--primary-color);
+        transition: transform 0.3s ease;
+    }
+
+    .faq-toggle::before {
+        top: 9px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+    }
+
+    .faq-toggle::after {
+        top: 0;
+        left: 9px;
+        width: 2px;
+        height: 100%;
+    }
+
+    .faq-item.active .faq-toggle::after {
+        transform: rotate(90deg);
+        opacity: 0;
+    }
+
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        padding: 0 1.5rem;
+        background-color: #fff;
+        transition: max-height 0.4s ease, padding-top 0.3s ease, padding-bottom 0.3s ease;
+    }
+
+    .faq-item.active .faq-answer {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        max-height: 500px;
     }
 }
 
@@ -533,16 +762,6 @@
     .page-hero h1 {
         color: #0a7a4d;
         /* Keep brand color in print */
-    }
-
-    .product-content,
-    .section-content {
-        display: block;
-    }
-
-    .product-content>div,
-    .section-content>div {
-        margin-bottom: 2rem;
     }
 
     /* Add page breaks before major sections */
