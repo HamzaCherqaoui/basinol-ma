@@ -197,6 +197,10 @@
         font-weight: 500;
     }
 
+    .nav__link.active::after {
+        display: none;
+    }
+
     /* Dropdown menu */
     .dropdown {
         background: none;
