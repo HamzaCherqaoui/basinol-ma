@@ -23,20 +23,20 @@
 /* ===== Mobile Navigation ===== */
 @media (max-width: 768px) {
 
-    /* Mobile menu toggle animation - Refined Apple-like animation */
+    /* Mobile menu toggle animation - Apple-like animation */
     .mobile-menu-toggle.active span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
-        transition: transform var(--transition-fast);
+        transition: transform 0.3s ease;
     }
 
     .mobile-menu-toggle.active span:nth-child(2) {
         opacity: 0;
-        transition: opacity var(--transition-fast);
+        transition: opacity 0.3s ease;
     }
 
     .mobile-menu-toggle.active span:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
-        transition: transform var(--transition-fast);
+        transition: transform 0.3s ease;
     }
 
     /* Adjust header spacing on mobile */
@@ -49,7 +49,7 @@
     /* Fix logo positioning and dimensions on mobile */
     .header__logo {
         position: relative;
-        left: 0;
+        left: 0.5rem;
         z-index: 101;
         display: flex;
         align-items: center;
@@ -67,119 +67,7 @@
         display: none;
     }
 
-    /* Mobile sidebar navigation */
-    /* Sidebar container */
-    .nav__list {
-        position: fixed;
-        top: 0;
-        right: -100%;
-        width: 75%;
-        max-width: 320px;
-        height: 100vh;
-        z-index: 1001;
-        background-color: var(--primary-color);
-        padding-top: 5.5rem;
-        /* space for logo and close button */
-        margin: 0;
-        overflow-y: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
-        transition: right 0.3s ease;
-    }
-
-    .nav__list.show {
-        right: 0;
-    }
-
-    /* Header row inside sidebar for logo and close button */
-    .sidebar-header {
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 75%;
-        max-width: 320px;
-        height: 5rem;
-        background-color: var(--primary-color);
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 0 1.5rem;
-        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
-        z-index: 1102;
-    }
-
-    /* Basinol favicon logo */
-    .sidebar-header .logo {
-        display: flex;
-        align-items: center;
-    }
-
-    .sidebar-header .logo img {
-        height: 30px;
-        width: auto;
-    }
-
-    /* Close button */
-    .sidebar-close-btn {
-        cursor: pointer;
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.8rem;
-        font-weight: bold;
-        line-height: 1;
-        padding: 0;
-        user-select: none;
-    }
-
-    /* Nav items */
-    .nav__item {
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        margin: 0 1.5rem;
-        /* shorten horizontal length of border */
-        transition: background-color var(--transition-fast);
-        width: calc(100% - 3rem);
-        /* account for horizontal margin */
-    }
-
-    .nav__item:last-child {
-        border-bottom: none;
-    }
-
-    .nav__item:hover {
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    .nav__link {
-        padding: 1rem 1.5rem;
-        position: relative;
-        transition: color var(--transition-fast), transform var(--transition-fast);
-        display: block;
-        width: 100%;
-        color: var(--white);
-        font-size: 1.1rem;
-        text-decoration: none;
-    }
-
-    /* Remove any existing active bar styles */
-
-    /* Add active bar as left border aligned with text */
-    .nav__link.active {
-        font-weight: 600;
-        color: var(--white);
-        border-left: 4px solid var(--white);
-        padding-left: calc(1.5rem - 4px);
-        /* subtract border width so text doesn't shift */
-    }
-
-    /* Optional: on hover, keep text color white */
-    .nav__link:hover {
-        transform: translateX(5px);
-        color: var(--white);
-    }
-
+    /* Mobile menu toggle button */
     .mobile-menu-toggle {
         display: block;
         margin-left: 0.5rem;
@@ -188,88 +76,329 @@
         cursor: pointer;
     }
 
-    /* Dropdown menu */
-    .dropdown {
-        position: static;
+    /* Apple-like mobile navigation */
+    .nav__list {
+        position: fixed;
+        top: 80px;
+        /* Position below header */
+        left: 0;
         width: 100%;
-        transform: none;
-        box-shadow: none;
-        padding: 0 1.5rem;
-        background-color: rgba(255, 255, 255, 0.1);
-        display: none;
-        max-height: 0;
+        height: 0;
+        background-color: rgba(255, 255, 255, 0.98);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
         overflow: hidden;
-        transition: max-height 0.3s ease, opacity 0.3s ease;
+        opacity: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        /* Align items to the left */
+        justify-content: flex-start;
+        /* Start from the top */
+        transition: height 1.2s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.5s ease;
+        z-index: 99;
+        padding: 0;
+        margin: 0;
+        transform-origin: top;
+        /* Ensure animation starts from the top */
     }
 
-    .nav__item.has-dropdown.active .dropdown {
+    /* When menu is toggled open */
+    .nav__list.show {
+        height: auto;
+        /* Auto height to accommodate content */
+        max-height: calc(100vh - 60px);
+        /* Maximum height is viewport minus header */
+        opacity: 1;
+        padding-top: 0.5rem;
+        padding-bottom: 1.5rem;
+        overflow-y: auto;
+        /* Add scrolling for very tall menus */
+    }
+
+    .nav__list::before {
+        content: "";
+        display: block;
+        width: 90%;
+        /* Line is 90% wide, leaving space on sides */
+        height: 1px;
+        /* Thin line */
+        background-color: rgba(0, 0, 0, 0.1);
+        /* Light gray */
+        margin: 0 auto -1rem auto;
+        /* Center horizontally + vertical spacing */
+        border-radius: 1px;
+        /* Smooth edges */
+        position: relative;
+        top: -7px;
+    }
+
+    /* Nav items */
+    .nav__item {
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+        transition-delay: 0.1s;
+        margin: -0.2rem;
+        border-bottom: none;
+        width: 100%;
+    }
+
+    .nav__list.show .nav__item {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    /* Stagger the animation for each item */
+    .nav__list.show .nav__item:nth-child(1) {
+        transition-delay: 0.1s;
+    }
+
+    .nav__list.show .nav__item:nth-child(2) {
+        transition-delay: 0.15s;
+    }
+
+    .nav__list.show .nav__item:nth-child(3) {
+        transition-delay: 0.2s;
+    }
+
+    .nav__list.show .nav__item:nth-child(4) {
+        transition-delay: 0.25s;
+    }
+
+    .nav__list.show .nav__item:nth-child(5) {
+        transition-delay: 0.3s;
+    }
+
+    .nav__list.show .nav__item:nth-child(6) {
+        transition-delay: 0.35s;
+    }
+
+    .nav__link {
+        display: block;
+        padding: 0.5rem 2rem;
+        color: var(--secondary-color);
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 400;
+        transition: color 0.3s ease;
+    }
+
+    .nav__link:hover {
+        color: var(--primary-color);
+    }
+
+    .nav__item:last-child {
+        border-bottom: none;
+    }
+
+    .nav__link.active {
+        color: var(--primary-color);
+        font-weight: 500;
+    }
+
+    /* Dropdown menu */
+    .dropdown {
+        background: none;
+        padding: 0;
+        display: none;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease, opacity 0.5s ease;
+        width: 100%;
+        margin-top: 0.5rem;
+        /* Full width */
+    }
+
+    .nav__item.has-dropdown.active>.dropdown {
         display: block;
         opacity: 1;
-        max-height: 500px;
-        visibility: visible;
+        max-height: none;
+        /* No maximum height */
+        padding-left: 0;
     }
 
     .dropdown-container {
+        display: grid;
+        /* make sure grid is active */
         grid-template-columns: 1fr;
+        padding: 0;
+        gap: 0;
+        /* explicitly remove gaps */
+    }
+
+
+    .dropdown-section {
+        margin: 0;
+        /* reset all margins */
+        padding: 0;
+        /* reset padding if needed */
+        position: relative;
+    }
+
+    /* Also reset margins/paddings of dropdown children */
+    .dropdown-section>* {
+        margin: 0;
         padding: 0;
     }
 
-    .dropdown-section {
-        margin-bottom: 0.5rem;
-    }
-
+    /* First level dropdown titles (category headers) */
     .dropdown-title {
-        font-size: 0.9rem;
-        padding: 0.5rem 0;
-        color: var(--white);
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        font-size: 1rem;
+        padding: 1rem 2rem;
+        color: var(--secondary-color);
+        border-bottom: none;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        /* Align content to the left */
+        cursor: pointer;
+        transition: color 0.3s ease, background-color 0.3s ease;
+        position: relative;
+        /* For absolute positioning of the arrow */
+        -webkit-tap-highlight-color: transparent;
+        /* Remove tap highlight on mobile */
     }
 
+    /* Add subtle hover effect to indicate clickability */
+    .dropdown-title:hover {
+        background-color: rgba(0, 0, 0, 0.02);
+    }
+
+    /* Arrow for dropdown titles */
+    .dropdown-title::after {
+        content: '›';
+        font-size: 1.3rem;
+        color: var(--secondary-color);
+        transition: transform 0.3s ease, color 0.3s ease;
+        position: absolute;
+        right: 1rem;
+        /* Position arrow on the right */
+    }
+
+    /* Active state for dropdown title */
+    .dropdown-section.active>.dropdown-title {
+        color: var(--primary-color);
+    }
+
+    /* Only rotate arrow for active sections that are not the main Produits page */
+    .dropdown-section.active:not(.main-category)>.dropdown-title::after {
+        transform: rotate(90deg);
+        color: var(--primary-color);
+    }
+
+    /* Special styling for the main Produits category */
+    .dropdown-section.main-category>.dropdown-title::after {
+        right: 1rem;
+    }
+
+    /* Dropdown lists (subcategories) */
+    .dropdown-list {
+        display: none;
+        opacity: 0;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s ease, opacity 0.4s ease;
+        padding-left: 0.5rem !important;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin: 0;
+        background-color: rgba(0, 0, 0, 0.01);
+        /* Subtle background to differentiate from parent */
+    }
+
+    /* Decrease space between subpages */
+    .dropdown-list .dropdown-item {
+        margin: 0;
+        padding-left: 1rem;
+        border-bottom: none;
+    }
+
+    /* Style for dropdown items to make them more distinct */
+    .dropdown-list .dropdown-link {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+        display: block;
+        color: var(--secondary-color);
+        transition: color 0.3s ease, background-color 0.3s ease;
+        margin: 0;
+    }
+
+    .dropdown-list .dropdown-link:hover {
+        background-color: rgba(0, 0, 0, 0.02);
+    }
+
+    /* Active state for dropdown list */
+    .dropdown-section.active>.dropdown-list {
+        display: block;
+        opacity: 1;
+        max-height: 500px;
+        padding-bottom: 0.5rem;
+    }
+
+    /* Dropdown links (subcategory items) */
     .dropdown-link {
+        display: block;
+        font-size: 0.95rem;
         padding: 0.5rem 0;
-        color: rgba(255, 255, 255, 0.8);
-        text-decoration: none;
+        color: var(--secondary-color);
+        transition: color 0.3s ease;
     }
 
     .dropdown-link:hover {
-        color: var(--white);
+        color: var(--primary-color);
     }
 
+    /* Main dropdown item */
     .nav__item.has-dropdown {
         position: relative;
-        /* to position arrow absolutely inside */
     }
 
     .nav__item.has-dropdown>.nav__link {
         position: relative;
         padding-right: 2rem;
-        /* space for the arrow on the right */
         display: flex;
         align-items: center;
         justify-content: space-between;
-        /* text left, arrow right */
     }
 
     /* Apple-like arrow: simple chevron */
     .nav__item.has-dropdown>.nav__link::after {
         content: '›';
-        /* simple right chevron */
-        position: absolute;
-        right: 1rem;
-        /* distance from right edge */
-        top: 50%;
-        transform: translateY(-50%) rotate(0deg);
-        font-size: 1.2rem;
-        color: rgba(255, 255, 255, 0.6);
+        font-size: 1.5rem;
+        color: var(--secondary-color);
         transition: transform 0.3s ease, color 0.3s ease;
-        pointer-events: none;
-        /* so click goes to the link */
     }
 
-    /* Rotate arrow down when active */
     .nav__item.has-dropdown.active>.nav__link::after {
-        transform: translateY(-50%) rotate(90deg);
-        color: rgba(255, 255, 255, 0.9);
+        transform: rotate(90deg);
+        color: var(--primary-color);
+    }
+
+    /* Mobile menu overlay */
+    .mobile-menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        /* Always full height */
+        background-color: rgba(0, 0, 0, 0);
+        opacity: 0;
+        /* Hidden by default */
+        pointer-events: none;
+        /* Prevent clicks when hidden */
+        transition: background-color 0.5s ease, opacity 0.5s ease;
+        z-index: 98;
+    }
+
+    .mobile-menu-overlay.show {
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 1;
+        pointer-events: auto;
+        /* Clickable only when visible */
     }
 
     /* Product categories responsive adjustments for horizontal layout */
@@ -1235,15 +1364,6 @@
 /* ===== High Resolution Screens ===== */
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
-
-    /* Optimize images for high-resolution displays */
-    .hero__image img,
-    .category__image img,
-    .news-image img,
-    .product-image img,
-    .section-image img {
-        image-rendering: -webkit-optimize-contrast;
-    }
 
     /* Sharper text rendering for high-res displays */
     body {
