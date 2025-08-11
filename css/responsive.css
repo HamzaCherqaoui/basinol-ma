@@ -662,7 +662,7 @@
     .faq-item.active .faq-answer {
         padding-top: 1rem !important;
         padding-bottom: 1rem !important;
-        max-height: 500px;
+        max-height: 900px;
     }
 }
 
@@ -1037,13 +1037,17 @@
         margin: 1.5rem 0 !important;
     }
 
-    body.additives-page .minimalist-product-item {
+    body.additives-page .minimalist-product-item,
+    body.boats-page .minimalist-product-item,
+    body.grease-page .minimalist-product-item {
         width: 100% !important;
         float: none !important;
         display: block !important;
     }
 
-    body.additives-page .product-categories .container {
+    body.additives-page .product-categories .container,
+    body.boats-page .product-categories .container,
+    body.grease-page .product-categories .container {
         display: flex !important;
         flex-direction: column !important;
         gap: 1rem !important;
