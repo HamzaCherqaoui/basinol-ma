@@ -1236,15 +1236,6 @@
 @media (-webkit-min-device-pixel-ratio: 2),
 (min-resolution: 192dpi) {
 
-    /* Optimize images for high-resolution displays */
-    .hero__image img,
-    .category__image img,
-    .news-image img,
-    .product-image img,
-    .section-image img {
-        image-rendering: -webkit-optimize-contrast;
-    }
-
     /* Sharper text rendering for high-res displays */
     body {
         -webkit-font-smoothing: antialiased;
