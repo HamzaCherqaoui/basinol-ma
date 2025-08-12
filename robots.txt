@@ -1,3 +1,3 @@
 User-agent: *
 Disallow:
-Sitemap: https://www.basinol.ma/sitemap.xml
+Sitemap: https://basinol.ma/sitemap.xml
