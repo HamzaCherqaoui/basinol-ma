@@ -1290,6 +1290,24 @@
         width: 40px;
         height: 40px;
     }
+
+    .cookie-notice__content p {
+        text-align: center;
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .cookie-notice__content button#acceptCookies {
+        min-width: 140px;
+        /* wider button */
+        padding: 0.4rem 8rem;
+        font-size: 1rem;
+        cursor: pointer;
+        /* Optional: center button explicitly if needed */
+        display: block;
+        align-self: center;
+    }
+
 }
 
 /* ===== Print Styles ===== */
