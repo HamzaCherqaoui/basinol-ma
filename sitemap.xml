@@ -8,53 +8,568 @@
 
 
 <url>
-  <loc>https://www.basinol.ma/</loc>
-  <lastmod>2025-07-21T00:22:41+00:00</lastmod>
+  <loc>https://basinol.ma/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
-  <loc>https://www.basinol.ma/entreprise/</loc>
-  <lastmod>2025-07-21T00:22:41+00:00</lastmod>
+  <loc>https://basinol.ma/entreprise/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.basinol.ma/produits/</loc>
-  <lastmod>2025-07-21T00:22:41+00:00</lastmod>
+  <loc>https://basinol.ma/produits/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.basinol.ma/produits/huiles-moteur/</loc>
-  <lastmod>2025-07-21T00:22:41+00:00</lastmod>
+  <loc>https://basinol.ma/produits/huiles-moteur/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.basinol.ma/produits/huiles-transmission/</loc>
-  <lastmod>2025-07-21T00:22:41+00:00</lastmod>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.basinol.ma/partenaires/</loc>
-  <lastmod>2025-07-21T00:22:41+00:00</lastmod>
+  <loc>https://basinol.ma/produits/huiles-moteur/vehicules-commericaux-et-equipements-stationnaires/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.basinol.ma/actualit%C3%A9s/</loc>
-  <lastmod>2025-07-21T00:22:41+00:00</lastmod>
+  <loc>https://basinol.ma/produits/huiles-moteur/moto/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.basinol.ma/contact/</loc>
-  <lastmod>2025-07-21T00:22:41+00:00</lastmod>
+  <loc>https://basinol.ma/produits/huiles-moteur/fluides-fonctionnels/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.basinol.ma/politique-confidentialite/</loc>
-  <lastmod>2025-07-21T00:22:41+00:00</lastmod>
+  <loc>https://basinol.ma/produits/huiles-moteur/additifs/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://www.basinol.ma/produits/basinol-product-catalog-210x297-INT-2025-07-14.pdf</loc>
-  <lastmod>2025-07-21T00:22:41+00:00</lastmod>
+  <loc>https://basinol.ma/produits/huiles-moteur/navires-et-bateaux/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-transmission/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-transmission/transmission-automatique/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-transmission/transmission/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-hydrauliques/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/engrenages-industriels/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/travail-des-m%C3%A9taux/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/graisses/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-compresseurs/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/partenaires/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/actualit%C3%A9s/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/contact/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/politique-confidentialite/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/basinol-product-catalog-210x297-INT-2025-07-14.pdf</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/premium-016-lx/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/premium-020-pro/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/longlife-eco-020/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/premium-energy-020/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/longlife-030-pro/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/premium-030-la/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/premium-040-sx/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/premium-energy-0520/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/premium-0530-pro/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/superior-0530/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/power-longlife-0530/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/power-syn-0530-c4/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/premium-longlife-0530-dx/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/premium-high-0540-pro/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/premium-0540-c3/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/power-high-0540/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/evolution-sport-0550/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/evolution-sport-1060/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/power-syn-1030/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/power-syn-1040-plus/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/voitures-et-camionnettes/power-syn-1040/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/vehicules-commericaux-et-equipements-stationnaires/truck-longlife-0530-premium/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/vehicules-commericaux-et-equipements-stationnaires/truck-longlife-1040-premium-le/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/vehicules-commericaux-et-equipements-stationnaires/truck-longlife-1040-plus/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/vehicules-commericaux-et-equipements-stationnaires/truck-longlife-1540-premium/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/vehicules-commericaux-et-equipements-stationnaires/truck-longlife-1540-plus/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/vehicules-commericaux-et-equipements-stationnaires/turbo-power-1540/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/vehicules-commericaux-et-equipements-stationnaires/turbo-power-2050/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/vehicules-commericaux-et-equipements-stationnaires/super-stou-1030/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/vehicules-commericaux-et-equipements-stationnaires/super-stou-1040/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/vehicules-commericaux-et-equipements-stationnaires/super-stou-1540/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/moto/master-2t-synth/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/moto/master-2t-hs/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/moto/master-4t-1040/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/moto/master-4t-1060/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/moto/master-4t-1550/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/fluides-fonctionnels/antifreeze/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/fluides-fonctionnels/antifreeze-plus/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/fluides-fonctionnels/antifreeze-extra/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/fluides-fonctionnels/brake-fluid-dot-4/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/additifs/diesel-valve-injection-cleaner/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/additifs/petrol-valve-injection-cleaner/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/additifs/dpf-cleaner/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/additifs/engine-flushing-oil/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/navires-et-bateaux/premium-marine-40-hb/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-moteur/navires-et-bateaux/premium-marine-40-lb/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-transmission/transmission-automatique/fluid-atf-dex-3/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-transmission/transmission-automatique/fluid-atf-dex-6/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-transmission/transmission-automatique/fluid-atf-ag-pro/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-transmission/transmission-automatique/fluid-atf-cvt/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-transmission/transmission-automatique/fluid-atf-dct/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-transmission/transmission/gear-mtf-75w80/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-transmission/transmission/gear-oil-75w90-hyp/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-transmission/transmission/gear-oil-80w90-hyp/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-transmission/transmission/gear-oil-85w90-hyp/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/huiles-transmission/transmission/gear-oil-85w140-hyp/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-hydrauliques/hydraulic-hl10/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-hydrauliques/hydraulic-hl22/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-hydrauliques/hydraulic-hv32/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-hydrauliques/hydraulic-hl32/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-hydrauliques/hydraulic-hv46/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-hydrauliques/hydraulic-hl46/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-hydrauliques/hydraulic-hv68/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-hydrauliques/hydraulic-hl68/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-hydrauliques/hydraulic-hv100/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-hydrauliques/hydraulic-hl100/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-hydrauliques/hydraulic-hl150/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/engrenages-industriels/gear-ep-46/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/engrenages-industriels/gear-ep-68/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/engrenages-industriels/gear-ep-100/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/engrenages-industriels/gear-ep-150/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/engrenages-industriels/gear-ep-220/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/engrenages-industriels/gear-ep-320/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/engrenages-industriels/gear-ep-680/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/engrenages-industriels/gear-syn-150/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/engrenages-industriels/gear-syn-220/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/engrenages-industriels/gear-syn-320/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/engrenages-industriels/gear-syn-460/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/engrenages-industriels/gear-syn-680/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/graisses/ep-01/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/graisses/ep-02/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/graisses/ep-07/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/graisses/ep-02-m/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-compresseurs/vdl-32/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-compresseurs/vdl-46/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-compresseurs/vdl-68/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-compresseurs/vdl-100/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-compresseurs/vdl-150/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://basinol.ma/produits/lubrifiants-industriels/huiles-compresseurs/vdl-220/</loc>
+  <lastmod>2025-08-12T00:15:43+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 
