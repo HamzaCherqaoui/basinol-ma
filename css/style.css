@@ -2319,6 +2319,31 @@ section {
 }
 
 /* ===== Quality Section ===== */
+.quality-section .quality-badges,
+.quality-section .icons-grid {
+    display: flex;
+    /* single flex row on desktop */
+    flex-wrap: nowrap;
+    /* keep all icons in one row */
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-lg);
+}
+
+.quality-section .quality-row-center {
+    display: flex;
+    /* keeps its 2 items inline */
+    gap: var(--spacing-xl);
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.quality-section .quality-row-center img {
+    border-radius: 0;
+}
+
 .quality-section {
     background-color: var(--white);
     padding: var(--spacing-xxl) 0;
@@ -2344,6 +2369,10 @@ section {
     justify-content: center;
     gap: var(--spacing-xl);
     margin-bottom: var(--spacing-lg);
+}
+
+.quality-badges .quality-row-center {
+    display: contents;
 }
 
 .quality-badges img {

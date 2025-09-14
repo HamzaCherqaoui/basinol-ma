@@ -61,7 +61,7 @@ function initLanguageSwitcher() {
                 targetPage = currentPage.replace('.html', '-en.html');
 
                 // Show notification about redirection
-                alert('Switching to English version. In a real implementation, this would redirect to the English version of the current page.');
+                alert("La version anglaise de cette page n'est pas encore disponible. Veuillez réessayer plus tard ou continuer la navigation en français.");
 
                 // Simulate page reload (in a real implementation, this would be a redirect)
                 // window.location.href = targetPage;
@@ -71,7 +71,7 @@ function initLanguageSwitcher() {
                 // In a real implementation, this would redirect to the French version
 
                 // Show notification about redirection
-                alert('Switching to French version. In a real implementation, this would redirect to the French version of the current page.');
+                alert("La version anglaise de cette page n'est pas encore disponible. Veuillez réessayer plus tard ou continuer la navigation en français.");
 
                 // Simulate page reload
                 // window.location.reload();

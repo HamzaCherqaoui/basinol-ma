@@ -641,25 +641,46 @@
     }
 
     /* Grid setup: 3 columns */
-    .quality-section div[style*="display: flex; justify-content: center;"] {
+    /* Recommended — grid fills container, items aligned to the right */
+    .quality-section div[style*="display: flex; justify-content: center;"],
+    .quality-section .icons-grid {
         display: grid !important;
+        width: 100%;
+        /* <-- important: use full width of parent */
+        max-width: 100%;
         grid-template-columns: repeat(3, 90px);
         gap: 1rem 1.5rem;
-        justify-content: center;
-        margin: 0 auto 2rem;
-        max-width: fit-content;
+        justify-content: end;
+        /* push the grid items to the right */
+        justify-items: center;
+        /* center each item inside its column */
+        margin: 2rem 0 2rem 0;
+        /* no auto centering */
         place-items: center;
     }
 
-    /* Second row: last two icons centered spanning columns 2 and 3 */
-    .quality-section div[style*="display: flex; justify-content: center;"] picture:nth-child(4) {
-        grid-column: 2;
-        justify-self: center;
+    .quality-section .quality-row-center {
+        grid-column: 1 / -1;
+        /* span entire grid row */
+        display: flex;
+        justify-content: center;
+        /* center the two icons */
+        gap: 4rem;
+        align-items: center;
     }
 
-    .quality-section div[style*="display: flex; justify-content: center;"] picture:nth-child(5) {
-        grid-column: 3;
-        justify-self: center;
+    /* picture element styling */
+    .quality-section .icons-grid picture {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* image styling */
+    .quality-section .icons-grid picture img {
+        width: 90px !important;
+        height: 90px !important;
+        object-fit: contain;
+        border-radius: 0 !important;
     }
 
     /* Fix image size and remove border radius */
